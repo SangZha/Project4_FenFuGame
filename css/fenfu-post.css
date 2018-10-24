@@ -1,0 +1,340 @@
+
+.color-1{
+    color: #dcdbdb;
+}
+.color-2{
+    color:rgba(255,255,255,.3)
+}
+.color-3{
+    color:rgb(255,65,95);
+}
+button{
+    outline:0;
+    border:0;
+}
+.fenfu-home{
+    background-color:rgb(32, 32, 51);
+    overflow-x:hidden;
+}
+  .postarea-content{
+      width: 960px;
+      margin: 0 auto;
+  }
+/* 开头 */
+    .post-topblock{
+        margin-top: 180px;
+        background-color: #171a21;
+        height: 80px;
+        border-radius: 3px;
+    }
+        .post-titlebox{
+            height: 80px;
+            box-sizing: border-box;
+            position: relative;
+        }
+            .post-imgbox{
+                width: 220px;
+                height: 130px;
+                position: absolute;
+                top: -50px;
+                left: 0;
+            }
+                .post-imgbox>img{
+                    width: 220px;
+                    height: 130px;
+                    border-radius: 3px;
+                    padding: 5px;
+                    border:5px solid #dcdbdb;
+                    box-sizing: border-box;
+                }
+        .post-namebox{
+            font-size: 32px;
+            color:#f5f5f5;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 240px;
+            line-height: 80px;
+        }
+        .post-attentionbox{
+            float: right;
+            margin: 30px 20px 0 0;
+        }
+            .attention-button{
+                width: 80px;
+                outline: none;
+                padding: 5px 15px;
+                border-radius: 1px;
+                border:1px solid #f5f5f5;
+                text-align: center;
+                box-sizing: border-box;
+                background-color: #171a21;
+                cursor: pointer;
+                display: none;
+            }
+                .attention-button.yes{
+                    border:1px solid #f5f5f5;
+                    color:#f5f5f5;
+                }
+                .attention-button.no{
+                    border:1px solid  #a3a2a2;
+                    color: #a3a2a2;
+                }
+                .attention-button.on{display: block;}
+/* 主体部分  */
+    .post-mainblock{
+        margin-top: 30px;
+    }
+        /* 主体的标题头 */
+        .mainblock-titlebox{
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+            .mainblock-title{
+                font-size: 28px;
+                color:#dcdbdb;
+                text-shadow: 1px 1px 10px rgb(114, 114, 143)
+            }
+            .mainblock-back{
+                margin-top: 10px;
+                font-size: 14px;
+            }
+                .mainblock-back>a:hover{
+                    color:rgb(255,65,95);
+                    display: inline-block;
+                }
+        /* 主体的内容 */
+        .mainblock-contentbox{
+            padding-bottom: 20px;
+            border-bottom:1px solid rgba(255,255,255,0.1);
+        }
+            .mainblock-content{
+                margin-top: 20px;
+            }
+            /* 发帖人用户信息 */
+            .content-userinfo{
+                float: left;
+            }
+                .content-userinfo .userinfo-head{
+                    height: 60px;
+                    width: 60px;
+                }
+                .content-userinfo .userinfo-head>img{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 60px
+                }
+                    .content-userinfo .userinfo-name{
+                        font-size: 15px;
+                        text-align: center;
+                        margin-top: 10px;
+                        color:rgb(255,65,95);
+                    }
+            /* 帖子内容 */
+            .content-mainbox{
+                margin: 0 60px;
+            }
+                .content-main{
+                    color:#dcdbdb;
+                    font-size: 14px;
+                    padding: 0 20px;
+                }
+                    .content-main>p+p{
+                        margin-top: 20px;
+                    }
+            /* 回复区内容 */
+            .postarea-content .mainblock-replybox{
+                padding-top: 40px;
+            }
+                /* 评论发布 */
+                .postarea-content .mainblock-reply{
+                    margin: 0 80px;
+                }
+                    .reply-inputbox{
+                        padding-bottom: 20px;
+                    }
+                        .inputbox-userhead{
+                            width: 40px;
+                            height: 40px;
+                            float: left;
+                        }
+                            .inputbox-userhead>img{
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 40px;
+                            }
+                        .reply-inputbox .inputbox{
+                            margin: 0 60px;
+                            font-size: 0px;
+                            box-sizing: border-box;
+                            border:1px solid transparent;
+                        }
+                            .reply-inputbox .inputbox textarea{
+                                resize: none;
+                                border:1px solid transparent;
+                                outline: none;
+                                box-sizing: border-box;
+                                width: 100%;
+                                height: 80px;
+                                padding: 5px 10px;
+                                border-radius: 3px 3px 0 0;
+                                background-color: rgb(47, 47, 69);
+                                color:#f5f5f5;
+                                display: inline-block;
+                                font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+                            }
+                            .reply-inputbox .inputbox textarea[placeholder]{font-size: 14px;}
+                            .reply-inputbox .inputbox textarea:focus{border:1px solid rgb(255,65,95)}
+                            .post-mainblock .reply-inputbox .inputbox .inputbox-buttonbox{
+                                width: 100%;
+                                background-color: rgb(65, 65, 95);
+                                box-sizing: border-box;
+                                text-align: right;
+                                border-radius: 0 0 3px 3px;
+                                border:1px solid transparent;              
+                                height: 24px;
+                                position: relative;
+                            }
+                                .reply-inputbox .inputbox .inputbox-buttonbox .inputbox-button{
+                                    position: relative;
+                                    width: 10%;
+                                    height: 24px;
+                                    right: -1px;
+                                    bottom: 1px;
+                                    background-color: #171a21;
+                                    color:#dcdbdb;
+                                    border-radius: 0 0 3px 0;
+                                    border:1px solid transparent;
+                                    padding: 2px 15px;
+                                    cursor: pointer;
+                                    box-sizing: border-box
+                                }
+                /* 帖子的评论 */
+                .reply-outputbox{
+                  margin-top: 20px;
+                }
+                .reply-output{
+                    padding-top: 20px;
+                    border-top:1px dashed rgba(255,255,255,0.1);
+                }
+                    /* 左边信息 */
+                    .output-leftbox{
+                        float: left;
+                    }
+                            .output-leftbox .leftbox-userhead{
+                                width: 40px;
+                                height: 40px;
+                            }
+                                .output-leftbox .leftbox-userhead a img{
+                                    height: 40px;
+                                    width: 40px;
+                                    border-radius: 40px;
+                                }
+                        .output-leftbox .leftbox-button{
+                            display: inline-block;
+                            margin-top: 10px;
+                        }
+                        .post-mainblock .output-leftbox .leftbox-button .reply-button{
+                            border:none;
+                            outline: none;
+                            background-color: rgb(36, 36, 56);
+                            color:rgba(255,255,255,.3);
+                            cursor: pointer;
+                        }
+                    /* 右边主体 */
+                    .output-rightbox{
+                        margin:0 60px;    
+                        color:#a3a2a2                 
+                    }
+                        .rightbox-username,.rightbox-comment{
+                            font-size: 14px;
+                            margin-bottom: 10px;
+                        }
+                        .rightbox-time{
+                            font-size: 12px;
+                            padding-bottom: 20px;
+                        }
+                    /* 叠加回复 */
+                    .output-answerbox{
+                        margin: 0 60px;
+                    }
+                        .output-answer{
+                            padding-bottom: 20px;
+                        }
+                        .answer-userhead{
+                            width: 24px;
+                            height: 24px;
+                            float: left;
+                        }
+                            .answer-userhead>a>img{
+                                height: 24px;
+                                width: 24px;
+                                border-radius: 24px;
+                            }
+                        .answer-mainbox{
+                            padding: 2px;
+                            margin-left: 34px;
+                            font-size: 14px;
+                            color:#a3a2a2;
+                            position: relative;
+                        }
+                            .answer-mainbox .answer-username{float: left;}
+                            .answer-mainbox .answer-useranswer{margin-left: 8px;}
+                        .answer-metabox{
+                            margin-left: 34px;
+                            font-size: 12px;
+                            color:#a3a2a2;
+                        }
+                            .answer-metabox .answer-time{
+                                margin-top: 10px;
+                                display: inline-block;
+                            }
+                            .post-mainblock .answer-metabox .answer-button{
+                                background-color: rgb(36, 36, 56);
+                                color: rgba(255,255,255,.3);
+                                cursor: pointer;
+                                font-size: 12px;
+                            }
+                    /* 弹出的回复框 */
+                    .output-inputbox{
+                        margin: 0 60px;
+                    }
+                        .output-inputbox .inputbox{
+                            margin-bottom: 20px;
+                            font-size: 0;
+                            position: relative;
+                        }
+                        .output-inputbox .inputbox.on{display: block;}
+                        .output-inputbox .inputbox.off{display: none;}
+                        .output-inputbox .inputbox textarea{
+                            display: inline-block;
+                            resize: none;
+                            outline: none;
+                            width: 89%;
+                            height: 60px;
+                            padding: 5px 10px;
+                            border:1px solid transparent;
+                            border-radius: 3px;
+                            box-sizing: border-box;
+                            background-color: rgb(47, 47, 69);
+                            color:#f5f5f5;
+                            font-size: 14px;
+                            font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+                        }
+                        .output-inputbox .inputbox .inputbox-buttonbox{
+                            font-size: 14px;
+                            display: inline-block;
+                            height: 60px;
+                            width: 10%;
+                            margin-left: 1%;
+                            position: absolute;
+                        }
+                            .output-inputbox .inputbox .inputbox-buttonbox .inputbox-button{
+                                width: 100%;
+                                height: 100%;
+                                background-color: #171a21;
+                                color: #dcdbdb;
+                                border-radius: 3px;
+                                padding: 2px 15px;
+                                cursor: pointer;
+                                box-sizing: border-box;   
+                            }

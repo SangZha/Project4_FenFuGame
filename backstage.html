@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+<style>
+    html,body,li,ul,a{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+    html,body{
+        width: 100%;
+        height: 100%;
+    }
+    body{
+        background-color: #d1d1d1;
+        background: url(./img/column-bg-2.png) repeat-x;
+        background-size: 50px 1200px;
+    }
+    .backstage-adddiscount,.backstage-addcoupon,.backstage-addgame{
+        display: none;
+    }
+    .backstage-adddiscount.active,.backstage-addcoupon.active,.backstage-addgame.active{
+        display: block;
+    }
+    .backstage-navbox{
+        position: fixed;
+        height: 100%;
+        width: 200px;
+        background-color: #fc425f;
+        top: 0;
+        left: 0;
+    }
+    .backstage-nav{
+        margin: 80px 0;
+        text-align: center;
+        font-size: 16px;
+        color:#f5f5f5;
+        cursor: pointer;
+    }
+    .backstage-navbox .fa-gamepad{
+        display: inline-block;
+    }
+    .nav-addgame{
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .backstage-mainbox{
+        margin-left: 300px;
+    }
+        .backstage-main{
+            padding-top: 70px;
+        }
+        .addgame-column+.addgame-column,.addcoupon-column+.addcoupon-column{
+            margin-top: 40px;
+        }
+            .addgame-column-title,.addcoupon-column-title{
+                display: inline-block;
+                font-size: 20px;
+                line-height: 40px;
+                text-align: left;
+                width: 160px;
+                vertical-align: top;
+            }
+            .addgame-column-input,.addcoupon-column-input{
+                display: inline-block;
+                line-height: 40px;
+                height: 40px;
+            }
+            .addgame-column-input input,.addcoupon-column-input input{
+                font-size: 16px;
+                border: none;
+                width: 100%;
+                line-height: 40px;
+                font-size: 24px;
+                outline: none;
+                background-color: transparent;
+                color: #000000;
+                border-bottom: 1px solid rgba(0,0,0,1);
+                box-sizing: border-box;
+                height: 40px;
+            }
+            .addgame-column-input textarea,.addcoupon-column-input textarea{
+                resize: none;
+                width: 100%;
+                border: none;
+                border: 1px solid #000000;
+                outline: none;
+                background-color: transparent;
+                color: #000000;
+                font-size: 18px;
+                font-family: Arial;
+                box-sizing: border-box;
+                margin-top: 8px;
+                border-radius: 3px;
+                width: 400px;
+            }
+        .addgame-column .add-button,.addcoupon-column .add-button{
+            margin-left: 480px;
+            cursor: pointer;
+            outline: none;
+            border:1px solid #000000;
+            padding: 10px 15px;
+            background-color: transparent;
+        }
+.adddiscount-navbox{
+    width: 800px;
+    line-height: 50px;
+    border-bottom: 1px solid #000000;
+    font-size: 0;
+}
+    .adddiscount-row-name,.adddiscount-row-discount{
+        display: inline-block;
+        width: 50%;
+        font-size: 16px;
+    }
+.adddiscout-listbox{
+    margin-top: 40px;
+}
+.adddiscount-list{
+    width: 800px;
+    line-height: 50px;
+    font-size: 0;
+    margin-top: 30px;
+}
+    .adddiscount-row-input{
+        display: inline-block;
+        width: 30%;
+        font-size: 16px;
+    }
+    .adddiscount-list .adddiscount-row-input input{
+                font-size: 16px;
+                border: none;
+                width: 40%;
+                line-height: 40px;
+                font-size: 24px;
+                outline: none;
+                background-color: transparent;
+                color: #000000;
+                border-bottom: 1px solid rgba(0,0,0,1);
+            }
+            .adddiscount-row-button{
+                display: inline-block;
+                width: 10%;
+                height: 50px;
+            }
+                .adddiscount-row-button button{
+                    vertical-align: top;
+                    width: 100%;
+                    height: 40px;
+                    margin-top: 5px;
+                    outline: none;
+                    background-color: transparent;
+                    border:1px solid #000;
+                    border-radius: 3px;
+                    box-sizing: border-box;
+                    padding: 10px 15px;
+                    cursor: pointer;
+                }
+    .backstage-loginbox{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        text-align: center;
+    }
+        .backstage-loginbox:before{
+            content:'';
+            display: inline-block;
+            vertical-align: middle;
+            width: 1px;
+            height: 100%;   
+            margin-bottom: -80px;
+        }
+    .backstage-login{
+        vertical-align: middle;
+        display: inline-block;
+        width: 500px;
+        height: 400px;
+        background-color: rgb(255,66,95);
+        border-radius: 4px;
+        box-shadow: 1px 1px 4px rgba(0,0,0,0.4)
+    }
+        .backstage-login .login-logo{
+            margin-top: 40px;
+        }
+        .backstage-login .login-account{
+            margin-top: 16px;
+        }
+        .backstage-login .login-password{
+            margin-top: 32px;
+        }
+        .backstage-login .login-button{
+            margin-top: 44px;
+        }
+            .backstage-login input{
+                outline: none;
+                border: none;
+                background-color: transparent;
+                border-bottom:1px solid #dcdcdc;
+                width: 300px;
+                height: 32px;
+                font-size: 14px;
+                padding-left: 4px;
+                color:#ffffff;
+            }
+            ::-webkit-input-placeholder{
+                    color:#bebebe;
+                }
+            .backstage-login button{
+                background-color: #f5f5f5;
+                outline: none;
+                border:none;
+                width: 300px;
+                height: 32px;
+                border-radius: 4px;
+                color:rgb(255,66,95);
+                cursor:pointer;
+            }
+</style>
+</head>
+<body>
+    <div class="backstage-loginbox">
+        <div class="backstage-login">
+            <div class="login-logo">
+                <img src="./img/fenfu_logo.png" alt="">
+            </div>
+            <div class="login-account">
+                <input type="text" placeholder="请输入管理员帐户">
+            </div>
+            <div class="login-password">
+                <input type="password" name="" id="" placeholder="请输入管理员密码">
+            </div>
+            <div class="login-button">
+                <button>登录</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="backstage-mainbox">
+        <div class="backstage-navbox">
+            <div class="backstage-nav game">
+                <i class="fa fa-gamepad" aria-hidden="true"></i>
+                <div class="nav-addgame">添加新游戏 ></div>
+            </div>
+            <div class="backstage-nav coupon">
+                <i class="fa fa-ticket" aria-hidden="true"></i>
+                <div class="nav-addgame">添加优惠券 ></div>
+            </div>
+            <div class="backstage-nav discount">
+                <i class="fa fa-jpy" aria-hidden="true"></i>
+                <div class="nav-addgame">添加新折扣 ></div>
+            </div>
+        </div>
+        <div class="backstage-main">
+            
+            <div class="backstage-main-block game backstage-addgame active">
+                <ul>
+                    <li class="addgame-column">
+                        <div class="addgame-column-title">游戏中文名：</div>
+                        <div class="addgame-column-input ch-name">
+                            <input type="text">
+                        </div>
+                    </li>
+                    <li class="addgame-column">
+                        <div class="addgame-column-title">游戏英文名：</div>
+                        <div class="addgame-column-input en-name">
+                            <input type="text">
+                        </div>
+                    </li>
+                    <li class="addgame-column">
+                        <div class="addgame-column-title">游戏价格：</div>
+                        <div class="addgame-column-input price">
+                            <input type="text">
+                        </div>
+                    </li>
+                    <li class="addgame-column">
+                        <div class="addgame-column-title">游戏类型：</div>
+                        <div class="addgame-column-input type">
+                            <input type="text">
+                        </div>
+                    </li>
+                    <li class="addgame-column">
+                        <div class="addgame-column-title">开发商：</div>
+                        <div class="addgame-column-input developer">
+                            <input type="text">
+                        </div>
+                    </li>
+                    <li class="addgame-column">
+                        <div class="addgame-column-title">发行时间：</div>
+                        <div class="addgame-column-input date">
+                            <input type="text">
+                        </div>
+                    </li>
+                    <li class="addgame-column">
+                        <div class="addgame-column-title">配置要求：</div>
+                        <div class="addgame-column-input peizhi">
+                            <textarea name="text_sign" id="text_sign" cols="30" rows="8" placeholder=""></textarea>
+                        </div>
+                    </li>
+                    <li class="addgame-column">
+                        <div class="addgame-column-title">游戏介绍：</div>
+                        <div class="addgame-column-input peizhi">
+                            <textarea name="text_sign" id="text_sign" cols="30" rows="8" placeholder=""></textarea>
+                        </div>
+                    </li>
+                    <li class="addgame-column">
+                        <button class="add-button">确认添加</button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="backstage-main-block coupon backstage-addcoupon">
+                <ul>
+                    <li class="addcoupon-column">
+                        <div class="addcoupon-column-title">优惠券名：</div>
+                        <div class="addcoupon-column-input coupon-name">
+                            <input type="text">
+                        </div>
+                    </li>
+                    <li class="addcoupon-column">
+                        <div class="addcoupon-column-title">游戏ID：</div>
+                        <div class="addcoupon-column-input game-id">
+                            <input type="text">
+                        </div>
+                    </li>
+                    <li class="addcoupon-column">
+                        <div class="addcoupon-column-title">开始时间：</div>
+                        <div class="addcoupon-column-input s-date">
+                            <input type="text">
+                        </div>
+                    </li>
+                    <li class="addcoupon-column">
+                        <div class="addcoupon-column-title">截止时间：</div>
+                        <div class="addcoupon-column-input e-date">
+                            <input type="text">
+                        </div>
+                    </li>
+                    <li class="addcoupon-column">
+                        <div class="addcoupon-column-title">折扣大小：</div>
+                        <div class="addcoupon-column-input coupon-price">
+                            <input type="text" onkeydown="onlyNum();">
+                        </div>
+                    </li>
+                    <li class="addcoupon-column">
+                        <button class="add-button">确认添加</button>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="backstage-main-block discount backstage-adddiscount">
+                <div class="adddiscount-navbox">
+                    <div class="adddiscount-row-name">游戏名称 ></div>
+                    <div class="adddiscount-row-discount">折扣大小 ></div>
+                </div>
+                <div class="adddiscount-listbox">
+                    <div class="adddiscount-list">
+                        <div class="adddiscount-row-name">最终幻想</div>
+                        <div class="adddiscount-row-input">
+                            <input type="text" data-id="1">
+                        </div>
+                        <div class="adddiscount-row-button">
+                            <button>确认</button>
+                        </div>
+                    </div>
+                    <div class="adddiscount-list">
+                        <div class="adddiscount-row-name">最终幻想</div>
+                        <div class="adddiscount-row-input">
+                            <input type="text" data-id="2">
+                        </div>
+                        <div class="adddiscount-row-button">
+                            <button>确认</button>
+                        </div>
+                    </div>
+                    <div class="adddiscount-list">
+                        <div class="adddiscount-row-name">最终幻想</div>
+                        <div class="adddiscount-row-input">
+                            <input type="text" data-id="3">
+                        </div>
+                        <div class="adddiscount-row-button">
+                            <button>确认</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script>
+    $('.backstage-nav').click(function(){
+        if($(this).hasClass('game')){
+            $('.backstage-main-block').removeClass('active');
+            $('.backstage-main-block.game').addClass('active');
+        }
+        if($(this).hasClass('coupon')){
+            $('.backstage-main-block').removeClass('active');
+            $('.backstage-main-block.coupon').addClass('active');
+        }
+        if($(this).hasClass('discount')){ 
+            $('.backstage-main-block').removeClass('active');
+            $('.backstage-main-block.discount').addClass('active');
+        }
+    })
+
+    $('.add-button').click(function(){
+        var ch_name;
+        var en_name;
+        var price;
+        var type;
+        var developer;
+        var date;
+        var peizhi;
+        
+        var coupon;
+        var game_id;
+        var s_date;
+        var e_date;
+        var coupon_price;
+
+        if($(this).parents('.backstage-main-block').hasClass('game')){
+
+            ch_name = $('.addgame-column-input.ch-name input').val();
+            en_name = $('.addgame-column-input.en-name input').val();
+            price = $('.addgame-column-input.price input').val();
+            type = $('.addgame-column-input.type input').val();
+            developer = $('.addgame-column-input.developer input').val();
+            date = $('.addgame-column-input.date input').val();
+            peizhi = $('.addgame-column-input.peizhi textarea').val();
+            
+            $.ajax({
+                type:"POST",
+                data:{
+                    "ch_name":ch_name,
+                    "en_name":en_name,
+                    "price":price,
+                    "type":type,
+                    "developer":developer,
+                    "date":date,
+                    "peizhi":peizhi,
+                    "modelType":"post",
+                },
+                url:"/addreply/",
+                cache:false,
+                dataType:"html",
+                success:function(data,status,xml){
+                    if (data == "CommentReply_Flag"){
+                        //成功评论
+                        // alert("回复成功");
+                        // alert(data);
+                        alert(data);
+                    }
+                    else{
+                        //不成功报错
+                        // alert("回复失败");
+                        // alert(data);
+                    }
+                }
+            })
+        }
+        else {
+
+            coupon = $('.addcoupon-column-input.coupon-name input').val();
+            game_id = $('.addcoupon-column-input.game-id input').val();
+            s_date = $('.addcoupon-column-input.s-date input').val();
+            e_date = $('.addcoupon-column-input.e-date input').val();
+            coupon_price = $('.addcoupon-column-input.coupon-price input').val();
+
+            $.ajax({
+                type:"POST",
+                data:{
+                    "coupon":coupon,
+                    "game_id":game_id,
+                    "s_date":s_date,
+                    "e_date":e_date,
+                    "coupon_price":coupon_price,
+                    "modelType":"post",
+                },
+                url:"/addreply/",
+                cache:false,
+                dataType:"html",
+                success:function(data,status,xml){
+                    if (data == "CommentReply_Flag"){
+                        //成功评论
+                        // alert("回复成功");
+                        // alert(data);
+                        alert(data);
+                    }
+                    else{
+                        //不成功报错
+                        // alert("回复失败");
+                        // alert(data);
+                    }
+                }
+            })
+        }
+    })
+
+    $('.adddiscount-row-button').click(function(){
+        var root = $(this).parents('.adddiscount-list').find('.adddiscount-row-input input')
+        
+        var discount = root.val();
+        var discount_id = root.data('id');
+
+        $.ajax({
+            type:'POST',
+            data:{
+                'discount':discount,
+                'discount-id':discount_id,
+                "modelType":"post",
+            },
+            url:"/addreply/",
+            cache:false,
+            dataType:"html",
+            success:function(data,status,xml){
+                if (data == "CommentReply_Flag"){
+                    //成功评论
+                    // alert("回复成功");
+                    // alert(data);
+                    alert(data);
+                }
+                else{
+                    //不成功报错
+                    // alert("回复失败");
+                    // alert(data);
+                }
+            }
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,117 @@
+.fenfu-home{
+    background-color: rgb(36, 36, 56);
+    overflow-x:hidden
+}
+/* 对上传的插件进行css修改 */
+.dropify-wrapper{
+    height: 600px;
+    background-color: rgba(36, 36, 56, 0.5);
+}
+    .dropify-wrapper:hover .dropify-message:after{
+        height: 20px;
+        transform: translateY(0px);
+        opacity: 1;
+        transition: .3s;
+    }
+    .dropify-message:after{
+        content:"\6DFB\52A0\9898\56FE";
+        display: inline-block;
+        height: 20px;
+        transform: translateY(-12px);
+        opacity: 0;
+        color:#a3a3a3;
+    }
+    .dropify-message .fa{
+        font-size: 30px;
+        color: #a3a3a3;
+    }
+    .dropify-wrapper .dropify-preview .dropify-infos{
+        background-color: rgba(36, 36, 56, 0.5);
+    }
+    /* 对文编编辑器css修改 */
+    .simditor {
+        position: relative;
+        border: none;
+        border-top: 1px solid #b9c0ef;
+    }
+    .simditor .simditor-toolbar > ul > li > .toolbar-item {
+        display: inline-block;
+        width: 46px;
+        height: 40px;
+    outline: none;
+    color: #b9c0ef;
+    font-size: 15px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+}
+.simditor .simditor-wrapper {
+    background-color: transparent;
+}
+.simditor .simditor-toolbar {
+    border-bottom: 1px solid #b9c0ef;
+    background-color: transparent;
+    width: 100%;
+}
+.simditor .simditor-toolbar > ul > li > span.separator {
+    display: inline-block;
+    background: #b9c0ef;
+    width: 1px;
+    height: 18px;
+    margin: 11px 15px;
+    vertical-align: middle;
+}
+.simditor .simditor-body p{
+    color:#f5f5f5;
+}
+/* 将div做成可以自动适应变换高度的textarea */
+            .title-textarea{
+                margin-top: 20px;
+                width: 100%;
+                min-height: 40px; 
+                max-height: 300px;
+                padding: 0 12px; 
+                outline: 0; 
+                font-size: 36px; 
+                line-height: 40px;
+                word-wrap: break-word;
+                overflow: hidden;
+                box-sizing: border-box;
+                color:#dcdbdb;
+            }
+            .title-textarea:empty:before{
+                content: attr(placeholder);
+                color:rgb(169,169,169);
+            }
+            .title-textarea:focus:before{
+                content:none;
+            }
+.writearea-content{
+    margin: 0 auto;
+    width: 1100px;
+}
+    .write-imgbox{
+        margin-top: 120px;
+    }
+    .write-titleblock,.write-mainblock{
+        width: 960px;
+        margin: 0 auto;
+    }
+    .write-main{
+        margin-top: 20px;
+    }
+    .write-buttonbox{
+        position: fixed;
+        top: 100px;
+        right: 50px;
+    }
+        .write-button{
+            outline: none;
+            padding: 10px 20px;
+            border:1px solid #a3a3a3;
+            background-color: transparent;
+            border-radius: 4px;
+            color:#a3a3a3;
+            cursor:pointer;
+        }

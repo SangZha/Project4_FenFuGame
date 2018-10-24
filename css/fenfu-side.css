@@ -1,0 +1,48 @@
+.side-menu{
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    width: 35px;
+    background: #0f1218;
+    box-shadow: inset 0 0 10px rgba(0,0,0,.3);
+} 
+    .menubox{
+        position: absolute;
+        top: 50%;
+        margin-top: -80px;
+        width: 35px;
+        font-size: 24px;
+        color:#dcdbdb;
+        text-align: center;
+    }   
+        .menubox-shopping,.menubox-wish{
+            width: 35px;
+            height: 40px;
+            cursor: pointer;
+            position: relative;
+        } .menubox-shopping>a,.menubox-wish>a{color:#dcdbdb}
+        .menubox-wish{
+            margin-top: 20px;
+        }
+/* 心愿单和购物车的跳出提示 */
+        .shopping-card,.wish-card{
+            font-size: 14px;
+            position: absolute;
+            top: -3px;
+            left: 1px;
+            line-height: 40px;
+            height: 40px;
+            width: 0px;
+            text-align: center;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: #ffffff;
+            background: #ff6900;
+            border-radius: 3px 0 0 3px;
+        }
+    .menubox-shopping:hover>a>.shopping-card,.menubox-wish:hover>a>.wish-card{
+        left: -80px;
+        width: 80px;
+    }

@@ -1,0 +1,311 @@
+
+.color-1{
+    color: #dcdbdb;
+}
+.color-2{
+    color:rgba(255,255,255,.3)
+}
+.fenfu-home{
+    background-color:rgb(32, 32, 51);
+    overflow-x:hidden;
+}
+  .grouparea-content{
+      width: 960px;
+      margin: 0 auto;
+  }
+/* 开头 */
+    .group-topblock{
+        margin-top: 180px;
+        background-color: #171a21;
+        height: 80px;
+        border-radius: 3px;
+    }
+        .group-titlebox{
+            height: 80px;
+            box-sizing: border-box;
+            position: relative;
+        }
+            .group-imgbox{
+                width: 220px;
+                height: 130px;
+                position: absolute;
+                top: -50px;
+                left: 0;
+            }
+                .group-imgbox>img{
+                    width: 220px;
+                    height: 130px;
+                    border-radius: 3px;
+                    padding: 5px;
+                    border:5px solid #dcdbdb;
+                    box-sizing: border-box;
+                }
+        .group-namebox{
+            font-size: 32px;
+            color:#f5f5f5;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 240px;
+            line-height: 80px;
+        }
+        .group-attentionbox{
+            float: right;
+            margin: 30px 20px 0 0;
+        }
+            .attention-button{
+                width: 80px;
+                outline: none;
+                padding: 5px 15px;
+                border-radius: 1px;
+                border:1px solid #f5f5f5;
+                text-align: center;
+                box-sizing: border-box;
+                background-color: #171a21;
+                cursor: pointer;
+                display: none;
+            }
+                .attention-button.yes{
+                    border:1px solid #f5f5f5;
+                    color:#f5f5f5;
+                }
+                .attention-button.no{
+                    border:1px solid  #a3a2a2;
+                    color: #a3a2a2;
+                }
+                .attention-button.on{display: block;}
+/* 排序 */
+    .group-navblock{
+        margin-top: 20px;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        box-sizing: border-box;
+    }
+        .group-navbox{
+            position: relative;
+        }
+            .group-nav{
+                width: 100px;
+                text-align: center;
+                position: relative;
+                display: inline-block;
+                padding: 10px 0;
+            }
+                .group-nav:hover{
+                    background-color:  #30354b;
+                    border-radius:3px 3px 0 0;
+                }
+                .group-nav:hover .nav-item:before{
+                    transform: rotate(135deg);
+                }
+                .group-nav:hover .nav-item:after{
+                    transform: rotate(-135deg);
+                }
+                .group-nav:hover>.navitem-listbox{
+                    display: block;
+                }
+            .group-nav+.group-nav{
+                margin-left: 20px;
+            }
+                .nav-item{
+                    color:#b9c0ef;
+                    font-size: 14px;
+                    position: relative;
+                    cursor: pointer;
+                }
+                    .nav-item:before{transition: .5s;content: '';display: inline-block;position: absolute;right: 20px;top: 6px;width: 2px;height: 8px;background-color: #b9c0ef;transform: rotate(45deg);}
+                    .nav-item:after{transition: .5s;content: '';display: inline-block;position: absolute;right: 15px;top: 6px;width: 2px;height: 8px;background-color: #b9c0ef;transform: rotate(-45deg);}
+                .navitem-listbox{
+                    position: absolute;
+                    top: 38px;
+                    text-align: center;
+                    background-color: #171a21;
+                    color:#b9c0ef;
+                    width: 100px;
+                    border-radius: 0 0 3px 3px;
+                    font-size: 14px;
+                    z-index: 9999;
+                    display: none;
+                }
+                    .navitem-listbox ul .listbox-item{
+                        height: 30px;
+                        line-height: 30px;
+                        padding: 5px 10px;
+                        display: block;
+                        cursor: pointer;
+                    }
+                    .navitem-listbox ul .listbox-item:hover{
+                        background-color: #30354b
+                    }
+            .group-postbutton{
+                position: absolute;
+                right: 0;
+                display: inline-block;
+                margin-right: 30px;
+                padding: 10px 0;
+            }
+                .post-button{
+                    color: #b9c0ef;
+                    font-size: 14px;
+                    position: relative;
+                    cursor: pointer;
+                }
+    /* 主体部分 */
+    .group-mainblock{
+        margin-top: 10px;
+    }
+        .group-postbox{
+            padding: 20px;
+        }
+            .group-post{
+                position: relative;
+                margin: 0 80px;
+            }
+            /* 帖子头部 */
+            .posts-topbox{
+                position: relative;
+            }
+                .group-post+.group-post{
+                    padding-top: 20px;
+                    margin-top: 20px;
+                    border-top: 1px solid rgba(255,255,255,.1);
+                }
+            .post-userhead{
+                position: absolute;
+                top: 0;
+                left: -80px;
+                width: 60px;
+                height: 60px;
+            }
+                .post-userhead>a>img{
+                    width: 60px;
+                    height: 60px;
+                    display: inline-block;
+                    border-radius: 60px;
+                    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+                }
+            .post-username{
+                line-height: 25px;
+                display: inline-block;
+                font-size: 16px;
+                color:rgb(255,66,95);
+            }
+            .post-userintro{
+                line-height: 25px;
+                display: inline-block;
+                font-size: 14px;
+                color:rgba(255,255,255,.3);
+                margin-left: 10px;
+            }
+            /* 帖子主体 */
+            .posts-mainbox{
+                margin-top: 4px;
+            }
+                .post-title{
+                    font-size: 20px;
+                    font-weight: bold;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    color:#dcdbdb;
+                }
+                    .post-title>.color-1:hover{
+                        color: rgb(255,66,95);
+                    }
+                .post-content{
+                    margin-top: 20px;
+                    color:#9fa2ab;
+                }
+                    .post-content>p{
+                        margin-bottom: 10px;
+                    }
+            /* 帖子底部 */
+            .post-foot{
+                margin-top: 20px;
+            }
+                .postfoot-date,.postfoot-reply{
+                    display: inline-block;
+                    font-size: 14px;
+                    color:rgba(255,255,255,.3)
+                }
+                .postfoot-reply{
+                    margin-left: 10px;
+                }
+                
+                .grouparea-writearea.active{
+                    display: block;
+                }
+                .grouparea-writearea {
+                    width: auto;
+                    height: auto;
+                    position: fixed;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    top: 0;
+                    z-index: 10000;
+                    overflow: auto;
+                    background: rgba(0,0,0,0.5);
+                    display: none;
+                    text-align: center;
+                    }
+                    .grouparea-writearea:before {
+                        content: '';
+                        top: -50px;
+                        display: inline-block;
+                        height: 100%;
+                        width: 1px;
+                        vertical-align: middle;
+                        margin-bottom: -50px;
+                    }
+                    .grouparea-write {
+                        width: 800px;
+                        background-color: #33394d;
+                        display: inline-block;
+                        vertical-align: middle;
+                        border-radius: 10px;
+                        box-sizing: border-box;
+                        transition: .5s;
+                        position: relative;
+                    }
+                .group-write-title {
+                    padding: 20px 40px;
+                }
+            .group-write-title input[type="text"] {
+                border: none;
+                width: 100%;
+                line-height: 60px;
+                font-size: 24px;
+                outline: none;
+                background-color: transparent;
+                color: #dcdbdb;
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+                .group-write-content {
+                    padding: 0 40px;
+                }
+            .group-write-content textarea {
+                resize: none;
+                width: 100%;
+                border: 1px solid transparent;
+                border-radius: 2px;
+                outline: none;
+                background-color: transparent;
+                color: #dcdbdb;
+                font-size: 16px;
+                font-family: Arial;
+                box-sizing: border-box;
+            }
+                .group-write-content textarea:hover{
+                    border:1px solid rgba(255,255,255,0.5)
+                }
+                .group-write-buttonbox{
+                    text-align: right;
+                    padding: 20px 40px;
+                }
+                    .group-write-button{
+                        outline: none;
+                        border: none;
+                        background-color: rgba(252, 66, 95, 1);
+                        color:#dcdbdb;
+                        padding: 8px 15px;
+                        border-radius: 4px;
+                    }

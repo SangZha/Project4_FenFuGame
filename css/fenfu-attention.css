@@ -1,0 +1,94 @@
+.fenfu-home{
+    background: url(../img/fenfu-bg.png) center top no-repeat rgb(36, 36, 56);
+    overflow-x:hidden
+}
+    .attentionarea-contentbox{
+        margin-top: 140px;
+    }
+        .attentionarea-content{
+            width: 880px;
+            margin: 0 auto;
+        }
+            .attention-mygroupbox{
+                margin-bottom: 40px;
+                font-size: 0;
+            }
+                .mygroup-titlebox{
+                    padding-bottom: 20px;
+                    border-bottom:1px solid #dcdbdb;
+                }
+                    .mygroup-titlebox:after{
+                        content: ".";
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                    }
+                    .mygroup-title{
+                        font-size: 24px;
+                        color:#dcdbdb;
+                        line-height: 40px;
+                        float: left;
+                    }
+                    .mygroup-more{
+                        margin-top: 15px;
+                        font-size: 16px;
+                        float: right;
+                        cursor:pointer;
+                    }
+                    .mygroup-more a{color:#9fa2ab;}
+                .mygroup-groupbox{
+                    margin-bottom: 10px;
+                    display: inline-block;
+                    font-size: 0;
+                }
+                    .mygroup-group{
+                        width: 420px;
+                        margin-left: 40px;
+                        margin-top: 20px;
+                        display: inline-block;
+                        background-color: rgb(78, 78, 94);
+                        box-shadow: 1px 1px 4px rgba(0,0,0,.5);
+                        border-radius: 4px;
+                    }
+                    .mygroup-group:nth-child(2n-1){
+                        margin-left: 0;
+                    }
+                        .mygroup-img{
+                            width: 220px;
+                            height: 130px;
+                            float: left;
+                        }
+                            .mygroup-img img{
+                                width: 220px;
+                                height: 130px;
+                                border-radius: 4px 0 0 4px;
+                            }
+                        .mygroup-detail{
+                            margin-left: 230px;
+                        }
+                            .mygroup-name{
+                                font-size: 20px;
+                                font-weight: bold;
+                                line-height: 30px;
+                                margin-bottom: 75px;
+                                color:#dcdbdb;
+                            }
+                                .mygroup-group:hover a .mygroup-detail .mygroup-name{color:#fc425f;}
+                            .mygroup-numberbox{
+                                color:#9fa2ab;
+                                line-height: 20px;
+                                font-size: 14px;
+                            }
+                                .mygroup-attention,.mygroup-post{
+                                    display: inline-block;
+                                    width: 90px;
+                                }
+            .attention-shadow  {
+                height: 1px;
+                width: 80%;
+                left: 10%;
+                box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+                position: absolute;
+                top: 535px;
+            }

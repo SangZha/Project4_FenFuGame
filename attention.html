@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="./css/fenfu-head.css" />
+<link rel="stylesheet" type="text/css" href="./css/fenfu-side.css" />
+<link rel="stylesheet" type="text/css" href="./css/fenfu-bottom.css" />
+<link rel="stylesheet" type="text/css" href="./css/fenfu-attention.css" />
+<body>
+    <!-- 可以在我的小组下面加个个人动态，把我所关注的小组的最新文章加载出来 -->
+    <div class="fenfu-home">
+        <div class="fenfu-header">
+            <div class="header-nav">
+                <div class="left-nav">
+                    <ul>
+                        <li class="left-nav-item">
+                            <img src="./img/fenfu_logo.png" alt="" class="logo">
+                        </li>
+                        <li class="left-nav-item">
+                            <a class="header-nav-link" href="">游戏</a>
+                            <div class="header-listbox">
+                                <ul>
+                                    <div class="listbox-group En-fade">
+                                        <li class="listbox-group-item">
+                                            <a href="">体育</a>
+                                            SportGame
+                                        </li>
+                                        <li class="listbox-group-item">
+                                            <a href="">策略</a>
+                                            StrategyGame
+                                        </li>
+                                        <li class="listbox-group-item">
+                                            <a href="">动作</a>
+                                            ActionGame
+                                        </li>
+                                        <li class="listbox-group-item">
+                                            <a href="">角色扮演</a>
+                                            RoleplayingGame
+                                        </li>
+                                        <li class="listbox-group-item">
+                                            <a href="">竞速</a>
+                                            RacingGame
+                                        </li>
+                                        <li class="listbox-group-item">
+                                            <a href="">射击</a>
+                                            ShotingGame
+                                        </li>
+                                        <li class="listbox-group-item">
+                                            <a href="">格斗</a>
+                                            FightingGame
+                                        </li>
+                                        <li class="listbox-group-item">
+                                            <a href="">模拟</a>
+                                            SimulationGame
+                                        </li>
+                                    </div>
+                                    <div class="listbox-group">
+                                        <li class="listbox-group-item">
+                                            <a href="">查看所有游戏</a>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="left-nav-item">
+                            <a class="header-nav-link" href="">社区</a>
+                            <div class="header-listbox">
+                                <ul>
+                                    <div class="listbox-group">
+                                        <li class="listbox-group-item">
+                                            <a href="">热门帖子</a>
+                                        </li>
+                                        <li class="listbox-group-item">
+                                            <a href="">我的圈子</a>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="left-nav-item">
+                            <a class="header-nav-link" href="">资讯</a>
+                            <div class="header-listbox">
+                                <ul>
+                                        <div class="listbox-group">
+                                            <li class="listbox-group-item">
+                                                <a href="">最新资讯</a>
+                                            </li>
+                                            <li class="listbox-group-item">
+                                                <a href="">文章评测</a>
+                                            </li>
+                                        </div>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-nav">
+                    <ul>
+                        <li class="right-nav-item">
+                            <input type="text" class="search-text" placeholder="搜索其他游戏">
+                        </li>
+                        <li class="right-nav-item">
+                            <div class="links">
+                                <div id="login">登录</div>
+                                <span class="divide"></span>
+                                <div id="logup">注册</div>
+                            </div>
+                        </li>
+                        <li class="right-nav-item">
+                            <div class="avatar-box">
+                                <a href="users">
+                                    <img src="./img/avatar.jpg" alt="" >
+                                </a>
+                                <div class="users-menu">
+                                    <div class="users-profile">
+                                        <a href="users">
+                                            <img src="./img/avatar.jpg" alt="">
+                                        </a>
+                                        <div class="users-name">桑渣</div>
+                                    </div>
+                                    <div class="users-links">
+                                        <div>
+                                            <a href="">个人中心</a>
+                                        </div>
+                                        <div>
+                                            <a href="">修改资料</a>
+                                        </div>
+                                        <div>
+                                            <a href="">我的优惠</a>
+                                        </div>
+                                        <div>
+                                            <a href="">我的订单</a>
+                                        </div>
+                                    </div>
+                                    <div class="log-out">
+                                        <a href="/sign_out">退出</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="side-menu">
+            <div class="menubox">
+                <div class="menubox-shopping">
+                    <a href="/shop">
+                        <div class="shopping-card">购物车</div>
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>
+                </div>
+                <div class="menubox-wish">
+                    <a href="/wish">
+                        <div class="wish-card">心愿单</div>
+                        <i class="fa fa-heart" aria-hidden="true"></i> 
+                    </a>
+                </div>
+                <div class="menubox-backtop"></div>
+            </div>
+        </div>
+        <div class="overlayfixed">
+            <div class="overlaydirection">
+                <div class="inupbox login">
+                    <div class="inupcontent">
+                        <div class="inupswitch">
+                            <div class="loginbutton active">登录</div>
+                            <div class="logupbutton">注册</div>
+                        </div>
+                        <div class="loginform active">
+                            <input type="text" class="account" id="login-account" placeholder="请输入您的账号">
+                            <input type="password" class="password" id="login-account" placeholder="请输入您的密码">
+                            <input type="button" value="登录"  class="login-confirm">
+                        </div>
+                        <div class="logupform">
+                            <input type="text" class="account" id="logup-account" placeholder="请输入账号">
+                            <input type="password" class="password" placeholder="请输入密码">
+                            <input type="password" class="password" placeholder="请再次输入密码">
+                            <input type="button" value="确认"  class="logup-confirm">
+                        </div>
+                    </div>
+                    <div class="inupbox-shut">
+                        <i class="fa fa-times" aria-hidden="true"></i> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="attentionarea-contentbox">
+            <div class="attentionarea-content">
+                <div class="attention-box">  
+                <!-- attention-mygroupbox带标题的板块 -->
+                    <div class="attention-mygroupbox">
+                        <div class="mygroup-titlebox">
+                            <div class="mygroup-title">我的小组</div>
+                            <div class="mygroup-more">
+                                <a href="">更多 ></a> 
+                            </div>
+                        </div>
+                        <div class="mygroup-groupbox">
+                            <!-- mygroup-group每个圈子的板块 -->
+                            <div class="mygroup-group">
+                                <a href="">
+                                    <div class="mygroup-img">
+                                        <img src="./img/groupimg-1.jpg" alt="">
+                                    </div>
+                                    <div class="mygroup-detail">
+                                        <div class="mygroup-name">海岛大亨</div>
+                                        <div class="mygroup-numberbox">
+                                            <div class="mygroup-attention">关注数：33</div>
+                                            <div class="mygroup-post">帖子数：26</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mygroup-group">
+                                <a href="">
+                                    <div class="mygroup-img">
+                                        <img src="./img/groupimg-1.jpg" alt="">
+                                    </div>
+                                    <div class="mygroup-detail">
+                                        <div class="mygroup-name">海岛大亨</div>
+                                        <div class="mygroup-numberbox">
+                                            <div class="mygroup-attention">关注数：33</div>
+                                            <div class="mygroup-post">帖子数：26</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mygroup-group">
+                                <a href="">
+                                    <div class="mygroup-img">
+                                        <img src="./img/groupimg-1.jpg" alt="">
+                                    </div>
+                                    <div class="mygroup-detail">
+                                        <div class="mygroup-name">海岛大亨</div>
+                                        <div class="mygroup-numberbox">
+                                            <div class="mygroup-attention">关注数：33</div>
+                                            <div class="mygroup-post">帖子数：26</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mygroup-group">
+                                <a href="">
+                                    <div class="mygroup-img">
+                                        <img src="./img/groupimg-1.jpg" alt="">
+                                    </div>
+                                    <div class="mygroup-detail">
+                                        <div class="mygroup-name">海岛大亨</div>
+                                        <div class="mygroup-numberbox">
+                                            <div class="mygroup-attention">关注数：33</div>
+                                            <div class="mygroup-post">帖子数：26</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attention-mygroupbox">
+                        <div class="mygroup-titlebox">
+                            <div class="mygroup-title">热门小组</div>
+                            <div class="mygroup-more">
+                                <a href="">更多 ></a> 
+                            </div>
+                        </div>
+                        <div class="mygroup-groupbox">
+                            <div class="mygroup-group">
+                                <a href="">
+                                    <div class="mygroup-img">
+                                        <img src="./img/groupimg-1.jpg" alt="">
+                                    </div>
+                                    <div class="mygroup-detail">
+                                        <div class="mygroup-name">海岛大亨</div>
+                                        <div class="mygroup-numberbox">
+                                            <div class="mygroup-attention">关注数：33</div>
+                                            <div class="mygroup-post">帖子数：26</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mygroup-group">
+                                <a href="">
+                                    <div class="mygroup-img">
+                                        <img src="./img/groupimg-1.jpg" alt="">
+                                    </div>
+                                    <div class="mygroup-detail">
+                                        <div class="mygroup-name">海岛大亨</div>
+                                        <div class="mygroup-numberbox">
+                                            <div class="mygroup-attention">关注数：33</div>
+                                            <div class="mygroup-post">帖子数：26</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mygroup-group">
+                                <a href="">
+                                    <div class="mygroup-img">
+                                        <img src="./img/groupimg-1.jpg" alt="">
+                                    </div>
+                                    <div class="mygroup-detail">
+                                        <div class="mygroup-name">海岛大亨</div>
+                                        <div class="mygroup-numberbox">
+                                            <div class="mygroup-attention">关注数：33</div>
+                                            <div class="mygroup-post">帖子数：26</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mygroup-group">
+                                <a href="">
+                                    <div class="mygroup-img">
+                                        <img src="./img/groupimg-1.jpg" alt="">
+                                    </div>
+                                    <div class="mygroup-detail">
+                                        <div class="mygroup-name">海岛大亨</div>
+                                        <div class="mygroup-numberbox">
+                                            <div class="mygroup-attention">关注数：33</div>
+                                            <div class="mygroup-post">帖子数：26</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mygroup-group">
+                                <a href="">
+                                    <div class="mygroup-img">
+                                        <img src="./img/groupimg-1.jpg" alt="">
+                                    </div>
+                                    <div class="mygroup-detail">
+                                        <div class="mygroup-name">海岛大亨</div>
+                                        <div class="mygroup-numberbox">
+                                            <div class="mygroup-attention">关注数：33</div>
+                                            <div class="mygroup-post">帖子数：26</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mygroup-group">
+                                <a href="">
+                                    <div class="mygroup-img">
+                                        <img src="./img/groupimg-1.jpg" alt="">
+                                    </div>
+                                    <div class="mygroup-detail">
+                                        <div class="mygroup-name">海岛大亨</div>
+                                        <div class="mygroup-numberbox">
+                                            <div class="mygroup-attention">关注数：33</div>
+                                            <div class="mygroup-post">帖子数：26</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mygroup-group">
+                                <a href="">
+                                    <div class="mygroup-img">
+                                        <img src="./img/groupimg-1.jpg" alt="">
+                                    </div>
+                                    <div class="mygroup-detail">
+                                        <div class="mygroup-name">海岛大亨</div>
+                                        <div class="mygroup-numberbox">
+                                            <div class="mygroup-attention">关注数：33</div>
+                                            <div class="mygroup-post">帖子数：26</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mygroup-group">
+                                <a href="">
+                                    <div class="mygroup-img">
+                                        <img src="./img/groupimg-1.jpg" alt="">
+                                    </div>
+                                    <div class="mygroup-detail">
+                                        <div class="mygroup-name">海岛大亨</div>
+                                        <div class="mygroup-numberbox">
+                                            <div class="mygroup-attention">关注数：33</div>
+                                            <div class="mygroup-post">帖子数：26</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="attention-shadow"></div>
+        </div>
+        <div class="fenfu-bottom">
+            <div class="bottom-box">
+                <div class="copyright">
+                    ©Copyright FenfuGame.com 江西师范大学曾文涛
+                </div>
+                <div class="announcement">
+                    <div>健康游戏公告</div>
+                    <div>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当</div>
+                    <div>适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="./js/fenfu-head.js" type="text/javascript"></script>
+
+</html>

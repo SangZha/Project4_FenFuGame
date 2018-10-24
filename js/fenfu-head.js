@@ -1,0 +1,41 @@
+//下面的代码只是单纯的添加或去除class产生动态变化效果（（（（（考虑如何进行简化!!!!
+//弹窗的交互操作
+$(".loginbutton").click(function(){
+    $(".logupbutton").removeClass("active");
+    $(this).addClass("active");
+    $(".inupbox").removeClass("logup");
+    $(".inupbox").addClass("login");
+    $(".loginform").addClass("active")
+    $(".logupform").removeClass("active")
+})
+$(".logupbutton").click(function(){
+    $(".loginbutton").removeClass("active");
+    $(this).addClass("active");
+    $(".inupbox").removeClass("login");
+    $(".inupbox").addClass("logup");
+    $(".logupform").addClass("active")
+    $(".loginform").removeClass("active")
+})
+//弹窗的关闭
+$(".inupbox-shut").click(function(){
+    $(".overlayfixed").removeClass("active");
+})
+// 通过点击导航栏的登录注册产生弹窗
+$("#login").click(function(){
+    $(".overlayfixed").addClass("active");
+    $(".inupbox").removeClass("logup");
+    $(".inupbox").addClass("login");
+    $(".loginform").addClass("active")
+    $(".logupform").removeClass("active")
+    $(".loginbutton").addClass("active");
+    $(".logupbutton").removeClass("active");
+})
+$("#logup").click(function(){
+    $(".overlayfixed").addClass("active");
+    $(".inupbox").addClass("logup");
+    $(".inupbox").removeClass("login");
+    $(".loginform").removeClass("active")
+    $(".logupform").addClass("active")
+    $(".loginbutton").removeClass("active");
+    $(".logupbutton").addClass("active");
+})

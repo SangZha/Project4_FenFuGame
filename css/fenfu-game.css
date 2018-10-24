@@ -1,0 +1,276 @@
+.fenfu-home{
+    background: url(../img/fenfu-bg.png) center top no-repeat rgb(36, 36, 56);
+    overflow-x:hidden
+}
+.gamearea-content{
+    margin-top: 180px;
+}
+.gamearea-box{
+    width: 960px;
+    margin: 0 auto;
+}
+.gamearea-top{
+    width: 100%;
+    background-color: rgba(23, 26, 33, 0.9) !important;
+    box-sizing: border-box;
+    position: relative;
+    padding: 20px;
+}
+.ga-box{
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom:1px dashed #dcdbdb;
+}  
+    .ga-leftbox{
+        float: left;
+    }
+        .gameinfo-img{
+            width: 240px;
+            height: 120px;
+            position: absolute;
+            top: -40px;         
+            left: -50px;
+        }
+            .gameinfo-img>img{
+                width:  240px;
+                height: 120px;
+                border:2px solid rgb(51, 56, 68);
+                border-radius: 5px;
+                box-shadow: 1px 1px 1px #000000;
+            }
+        .gameinfo-namebox{   
+            color:#dcdbdb;
+        }
+            .namebox-gamename{
+                margin-left: 208px;
+            }
+            .ch-name{
+                font-size: 32px;
+                font-weight: bolder;
+            }
+            .en-name{
+                padding-top: 5px;
+            }
+        .infobox-evaluationbox{
+            padding-top: 25px;
+        }
+            .evaluation-title{
+                display: inline-block;
+                font-size: 18px;
+            }
+            .evaluation-symbol{
+                display: inline-block;
+                font-size: 18px;
+            }
+                .evaluation-symbol.great{
+                    color:#b45555;
+                }
+                .evaluation-symbol.bad{
+                    color:#74a468;
+                }
+            .evaluation-detail{
+                display: inline-block;
+                font-size: 12px;
+                vertical-align: bottom;
+                margin: 0 0 2px 10px;
+            }
+        .ga-rightbox{
+            float: right;
+            padding: 0 20px;
+            text-align: center;
+        }
+            .gameinfo-buyblock{
+                float: right;
+                border-left:1px dashed #dcdbdb;
+                padding-left: 20px;
+            }
+            .gameinfo-price{
+                font-size: 30px;
+                color:#eb6100;
+            }
+            .gameinfo-button{
+                margin-top: 10px;
+            }
+            .button-shop{
+                padding: 8px;
+                background-color: #eb6100;
+                border-radius: 3px;
+                cursor:pointer;
+            }
+            .button-wish{
+                padding-right: 8px;
+                text-align: right;
+                font-size: 12px;
+                margin-top: 12px;
+                color:#ada9a9;
+                cursor:pointer;
+            }
+    .gameinfo-detailsbox{
+        float: left;
+        text-align-last: left;
+        padding-right: 30px;
+    }
+        .details-punish,.details-date{
+            padding-top: 24px;
+        }
+        .punish-title,.date-title,.punish-name,.date-name{
+            display: inline-block;
+            color:#ada9a9;
+            font-size: 14px;
+        }
+        .punish-title,.date-title{
+            width: 60px;
+        }
+        .punish-name,.date-name{
+            background-color: rgb(36, 36, 56) !important
+        }
+
+/* 中部分：图片轮播 */
+.gamearea-slip{
+    margin: 15px 0;
+    width: 100%;
+    height: 540px;
+}
+/* 中部分：介绍与配置 */
+.gamearea-middle{
+    margin: 15px 0;
+    width: 100%;
+}
+    .gamearea-middle:after{
+        content:'';
+        clear: both;
+        visibility: hidden;
+        height: 0;
+        display: block;
+    }
+    .introducebox{
+        width: 576px;
+        float: right;
+    }
+        .introduce-title,.system-title,.commentbox-title{
+            font-size: 30px;
+            font-weight: bold;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #3f4760;
+            color:#ebebeb;
+        }
+    .systembox{
+        width: 370px;
+        float: left;
+        margin-right: 14px;
+    }
+    .introducebox,.systembox{
+        box-sizing: border-box;
+        padding: 20px 30px;
+        background-color: rgba(23, 26, 33, 0.9);
+        color:#aaa2a2;
+    }
+/* 下面部分：评论区 */
+.gamearea-bottom{
+    margin: 15px 0;
+    width: 100%;
+    background-color: rgba(23, 26, 33, 0.9) ;
+    box-sizing: border-box;
+}
+.commentbox{
+    padding: 20px 30px 50px 30px;
+}
+.commentbox-content{
+    background-color:rgb(36, 36, 56);
+    border-radius: 5px;
+}
+    .commentbox-content+.commentbox-content{
+        margin-top: 20px;
+    }
+/* 左边的头像用户信息区 */
+.comment-leftbox{
+    float: left;
+    width: 240px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+    .comment-userhead{
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-left: 10px;
+    }
+        .comment-userhead>a>img{
+            width: 60px;
+            height: 60px;
+            display: block;
+            border-radius: 60px;
+            box-sizing: border-box;
+            border: 2px solid rgba(23, 26, 33) ;
+        }
+    .comment-usernamebox .comment-username{
+        margin-left: 85px;
+        color:rgb(255,66,95);
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 3px;
+    }
+    .comment-userdate{
+        margin-left: 85px;
+        font-size: 12px;
+        color:#8b8484;
+        padding-top: 10px;
+    }
+    .comment-think{
+        margin-top: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+        .think-button{
+            padding: 5px;
+            box-sizing: border-box;
+
+            border-radius: 5px;
+        }
+            .think-button.like{
+                background-color: rgb(255,66,95);
+                color:#dcdbdb;
+            }
+            .think-button.dislike{
+                background-color: rgb(77, 63, 65);
+                color:#dcdbdb;
+            }
+/* 右边的内容区 */
+.comment-rightbox{
+    float: right;
+    width: 660px;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+.comment-inside{
+    border-left:1px dashed #3f4760;
+    min-height: 120px;
+    padding: 0 15px;
+}
+    .usercomment{
+        margin-bottom: 40px;
+        color: #b9c0ef;
+        font-size: 18px;
+        text-align: left;
+    }
+.commentreply{
+    padding: 8px 16px;
+    margin-left: 540px;
+    background-color: rgba(23, 26, 33, 0.9);
+    border-radius: 2px;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}    .commentreply>a{color: #b9c0ef;}
+
+/* 清除浮动 */
+    .gamearea-bottom:after,.commentbox-content:after,.ga-box:after{
+        content:'';
+        clear: both;
+        display: block;
+        visibility: hidden;
+        height: 0;
+    }

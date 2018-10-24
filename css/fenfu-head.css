@@ -1,0 +1,386 @@
+::-webkit-scrollbar-track-piece{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar{
+    width:12px;
+    background-color: #f5f5f5;
+}
+::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+} 
+
+body,html,ul,li,p{
+    margin: 0;
+    padding: 0;
+    border:0;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.fenfu-header{
+    background-color: #171a21;
+    position: fixed;
+    height: 80px;
+    top: 0;
+    width: 100%;
+    box-shadow: 1px 1px 1px #000000;
+    z-index: 100;
+}
+.header-nav{
+    position: relative;
+    margin: 0 auto;
+    width: 1440px;
+    height: 80px;
+}
+.left-nav{
+    float: left;
+}
+.left-nav-item{
+    float: left;
+    color:#dcdbdb;
+    position: relative;
+    line-height: 80px;
+    height: 80px;
+    transition:.5s;
+}
+    .logo{position: relative;}
+/* 头部导航栏的交互 */
+ .header-nav-link{
+    color:#dcdbdb;
+    line-height: 80px;
+    height: 80px;
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 14px;
+    position: relative;
+}
+    .header-nav-link:before,.header-nav-link:after{
+        content: '';
+        background-color: #dcdbdb;
+        display: inline-block;
+        position: relative;
+        transition:.5s;
+        margin-left: 5px;
+    }
+     .header-nav-link:before{
+        width: 2px;
+        height: 10px;
+        left: 40px;
+        transform: rotate(45deg);
+    }
+     .header-nav-link:after{
+        width: 10px;
+        height: 2px;
+        left:8px;
+        bottom:4px;
+        transform: rotate(45deg);
+    }
+/* 给上级标签赋予hover伪元素，这样使得新出现的下拉列表也有hover的效果 */
+    .left-nav-item:hover>.header-nav-link{
+        color:#ffffff;
+    }
+    .left-nav-item:hover>.header-nav-link:before{
+        transform: rotate(135deg);
+        background-color:#ffffff;
+    }
+    .left-nav-item:hover>.header-nav-link:after{
+        transform: rotate(-45deg);
+        background-color:#ffffff;
+    }
+/* 移动到导航栏时的列表 */
+.header-listbox{
+    z-index:99;
+    width: 160px;
+    background-color: #171a21;
+    position: absolute;
+    left:-35px;
+    border:1px solid #3a4056;
+    border-radius:0 0 4px 4px;
+    box-shadow:0 0 10px 0 #1d2133;
+    display: none;
+}
+    .listbox-group{
+        position: relative; 
+        border-bottom: 1px solid #3a4056;
+    }
+    .listbox-group-item{
+        width: 160px;
+        height: 40px;
+        line-height: 40px;
+        position: relative;
+        font-size: 14px;
+        padding: 0 10px;
+        box-sizing: border-box;
+        letter-spacing: 1px;
+    }
+        .listbox-group-item>a{
+            color:#dcdbdb;
+            line-height: 40px;
+            width: 100%;
+            display: inline-block;
+        }
+        .En-fade>.listbox-group-item>a{
+            color:#dcdbdb;
+            line-height: 40px;
+            width: 100%;
+            display: inline-block;
+            background-color: #171a21;
+            box-sizing: border-box;
+            padding: 0 10px ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            transition: .5s;
+        }
+    .listbox-group-item:hover{
+        background-color:#30354b;
+    }
+    .En-fade>.listbox-group-item:hover>a{
+        opacity: 0;
+    }
+/* 控制导航栏列表的出现消失 */
+.left-nav-item:hover .header-listbox {
+    display: block;
+}
+
+.right-nav{
+    float: right;
+}
+.right-nav-item{
+    float: left;
+    position: relative;
+    line-height: 80px;
+    height: 80px;
+    padding-left: 50px;
+}
+.search-text{ 
+    border:1px solid transparent;
+    border-bottom: 1px solid #dcdbdb;
+    background-color: #171a21;
+    color:#dcdbdb;
+    padding: 0px 10px 5px 10px;
+    box-sizing: border-box;
+    outline: none;
+    height: 30px;
+    width: 300px;
+    font-size: 14px;
+}
+.search-icon{
+    color:#dcdbdb;
+}
+.links>div{
+    font-size: 14px;
+    color:#dcdbdb;
+    display: inline-block;
+    cursor:pointer;
+}
+    .links>div:hover{
+        color:#ffffff
+    }
+.divide{
+    display: inline-block;
+    height: 16px;
+    width: 2px;
+    margin: 0 10px -2px;
+    background: #dcdbdb;
+}
+.avatar-box{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    line-height: 80px;
+    padding: 15px 0;
+    border-radius: 50px;
+    position: relative;
+}
+.avatar-box a img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.users-menu{
+    background-color: #30354b;
+    width: 280px; 
+    line-height: 30px;
+    position: absolute;
+    top: 80px;
+    left: -115px;
+    border-radius: 0 0 2px 2px;
+    border:1px solid #3a4056;
+    box-shadow: 0 0 10px 0 #1d2133;
+    display: none;
+}
+.users-profile{
+    padding: 20px 40px 10px 40px;
+    border-bottom: 1px solid #171a21;
+}
+.users-profile a{
+    width: 100px;
+    height: 100px;
+    margin: 0 50px;
+    display: block;
+}
+.users-profile a img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+.users-name{
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    width: 100%;
+    line-height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+}
+.users-links{
+    padding: 20px 40px 20px 40px;
+    border-bottom: 1px solid #171a21;
+}
+.users-links div{
+    display: inline-block;
+    text-align: center;
+}
+.users-links a{
+    color:#b9c0ef;
+    width: 97px;
+    display: inline-block;
+    font-size: 14px;
+}
+.log-out{
+    float: right;
+    font-size: 14px;
+    padding: 5px 0;
+}
+    .log-out a {
+        color:#b9c0ef;
+        margin-right: 20px;
+    }
+    .avatar-box:hover>.users-menu{
+        display: block;
+    }
+
+.overlayfixed{
+    width: auto;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    overflow: auto;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}.overlayfixed.active{display:block}
+    .overlaydirection{
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+    }
+    .overlaydirection:before{
+        content: '';
+        top: -50px;
+        display: inline-block;
+        height: 100%;
+        width: 1px;
+        vertical-align: middle;
+        margin-bottom: -50px;
+    }
+        .inupbox{
+            width: 400px;
+            background-color: #33394d;
+            display: inline-block;
+            vertical-align: middle;
+            border:5px solid rgba(136,142,156,0.8);
+            border-radius: 10px;
+            box-sizing: border-box;
+            transition: .3s;
+            position: relative;
+        }
+        .inupbox.login{ height: 400px;}
+        .inupbox.logup {height: 500px;}
+            .inupcontent{
+                padding:30px;
+            }
+                .inupswitch{
+                    border-bottom:1px solid rgba(94, 99, 110, 0.8);
+                    text-align: left;
+                }
+                    .loginbutton,.logupbutton{
+                        display: inline-block;
+                        color:#7a80a2;
+                        width: 60px;
+                        height: 40px;
+                        font-size: 18px;
+                        margin-right: 20px;
+                        cursor:pointer;
+                        line-height: 40px;
+                        letter-spacing: 7px;
+                    }
+                    .loginbutton.active,.logupbutton.active{
+                        color:#d0d7fc;
+                    }
+                .loginform,.logupform{
+                    width: 100%;
+                    padding-top: 40px;
+                    display: none;
+                    opacity: 0
+                }
+                .loginform.active,.logupform.active{
+                    display: block;
+                    opacity: 1;
+                }
+                    .account,.password,.login-confirm,.logup-confirm{
+                        width: 100%;
+                        outline: none;
+                        height: 40px;
+                        margin-bottom: 45px;
+                        box-sizing: border-box;
+                        padding:8px;
+                    }
+                    .login-confirm,.logup-confirm{
+                        background-color:#171a21;
+                        color:#dcdbdb;
+                        border:none;
+                        border-radius: 2px;
+                    }
+@keyframes fade-in{
+0% {
+    opacity: 0;
+    display: block;
+}
+50% {
+    opacity: 0.5;
+    display: block;
+}
+100% {
+    opacity: 1;
+    display: block;
+}
+}
+            .inupbox-shut{
+                position: absolute;
+                right: 10px;
+                top: 8px;
+                width: 20px;
+                height: 20px;
+                background-color: #6f7485;
+                border-radius: 20px;
+                cursor:pointer;
+            } .fa-times{position: relative; top:-2px;}

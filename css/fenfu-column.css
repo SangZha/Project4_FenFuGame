@@ -1,0 +1,233 @@
+.color-1{
+    color:#dcdbdb;
+}
+.fenfu-home{
+background-color:rgb(32, 32, 51);
+overflow-x:hidden;
+}
+.aritlcearea-content{
+    width: 960px;
+    margin: 0 auto;
+}
+/* 上面的幕布与介绍 */
+    .column-wrapperbox{
+        margin-top: 80px;
+        position: relative;
+        height: 470px;
+        text-align: center;
+        z-index: 0;
+        background: url(../img/column-bg-1.png) 50% no-repeat;
+    }
+        .column-wrapperbox:before{
+            content: "";
+            background: url(../img/column-bg-2.png) repeat-x;
+            background-size: 50px 950px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+        }
+        .column-wrapper{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            vertical-align: middle;
+            position: relative;
+        }
+            .column-wrapper:before{
+                content:'';
+                display: inline-block;
+                width: 1px;
+                height: 100%;
+                vertical-align: middle;
+            }
+                .wrapper-titlebox{
+                    display: inline-block;
+                    font-size: 32px;
+                    color:#dcdbdb;
+                    width: 120px;
+                    position: relative;
+                    
+                }
+            .column-wrapper .wrapper-titlebox .wrapper-title{
+                padding: 20px;
+                border: 3px solid #dcdbdb;
+                position: absolute;
+                top: -105px;
+                left: -20px;
+                width: 90px;
+            }
+            .column-wrapper .wrapper-titlebox .wrapper-subtitle{
+                top: 100px;
+                left: -95px;
+                position: absolute;
+                font-size: 18px;
+                width: 300px;
+                color:#b9c0ef;
+                letter-spacing: 4px;
+            }
+            .wrapper-buttonbox{
+                top: 180px;
+                left: -65px;
+                position: absolute;
+                font-size: 18px;
+                width: 240px;
+                color:#b9c0ef; 
+            }
+                .write-button{
+                    padding: 8px 20px;
+                    outline: none;
+                    color:#dcdbdb;
+                    border:none;
+                    background-color: rgb(120, 120, 148);
+                    border-radius: 5px;
+                    cursor:pointer;
+                    font-size: 16px;
+                }
+                    .write-button:hover{
+                        background-color: #fc425f;
+                    }
+/* 主体区域 */
+.column-mainbox{
+    margin-top: 20px;
+}
+/* 主体区域一：优秀up */
+.column-hotupbox{
+    margin: 0 auto;
+    width: 960px;
+}
+        .hotupbox-metabox,.hotcolumn-metabox{
+            text-align: center;
+            width: 100%;
+            margin-top:30px;
+        }
+          .hotupbox-meta,.hotcolumn-meta{
+              font-size: 16px;
+              color:#fc425f;
+              font-weight: bold;
+              letter-spacing: 1px
+          }
+        .hotupbox-mainbox{
+            margin-top: 30px;
+            font-size: 0;
+        }
+            .hotup-listbox{
+                background-color: rgb(120, 120, 148);
+                width: 220px;
+                border-radius: 5px;
+                box-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+                display: inline-block;
+                margin-left: 20px;
+                height: 238px;
+                vertical-align: top;
+            }
+                .hotup-list{
+                    padding: 20px;
+                    text-align: center;
+                }
+                .hotup-list:hover .hotup-name{
+                    color:#fc425f;
+                }
+                    .hotup-avator{
+                        width: 60px;
+                        height: 60px;
+                        display: inline-block;
+                    }
+                        .hotup-avator img{
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 60px;
+                        }
+                    .hotup-name{
+                        font-size: 20px;
+                        color:#dcdbdb;
+                        font-weight: bold;
+                        margin-top: 10px;
+                    }
+                    .hotup-intro{
+                        font-size: 14px;
+                        color:rgb(182, 182, 184);
+                        margin-top: 10px;
+                    }
+                    .hotup-number{
+                        font-size: 14px;
+                        color:rgb(182, 182, 184);
+                        margin-top: 20px;
+                        padding-bottom: 15px;
+                    }
+    /* 主体区域二：优秀文章 */
+    .column-hotcolumn{
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .column-hotcolumn:after{
+        content:'';
+        display: block;
+        clear: both;
+        visibility: hidden;
+        height: 0;
+    }
+    .hotcolumn-metabox{
+        margin-top: 50px;
+    }
+        .hotcolumn-mainbox{
+            margin-top: 30px;
+        }
+            .hotcolumn-listbox{
+                width: 380px;
+                background-color:  rgb(120, 120, 148);
+                border-radius: 5px;
+                box-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+                float: left;
+                margin-left: 20px;
+                margin-top: 50px;
+            }
+            /* :nth-child()选择器，后面的公式意思为以3为周期，向偏移2（即1 4 7 10) */
+            .hotcolumn-listbox:nth-child(3n-2){
+                margin-left: 0;
+            }
+            .hotcolumn-listbox:nth-child(-n+3){
+                margin-top: 0;
+            }
+                .hotcolumn-cover{
+                    width: 100%;
+                    height: 180px;
+                    background: center center;
+                    background-size: cover;
+                    border-radius: 5px 5px 0 0;
+                }
+                .hotcolumn-title{
+                    padding: 10px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color:#dcdbdb;
+                    height: 54px;
+                    overflow: hidden;
+                }
+                .hotcolumn-cover:hover+.hotcolumn-title,.hotcolumn-title:hover{
+                    color:#fc425f;
+                }
+                .hotcolumn-userinfo{
+                    padding: 10px;
+                }
+                    .hotcolumn-userhead{
+                        height: 30px;
+                        width: 30px;
+                        float: left;
+                    }
+                    .hotcolumn-userhead img{
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 30px
+                    }
+                    .hotcolumn-username{
+                        margin-left: 10px;
+                        display: inline-block;
+                        font-size: 16px;
+                        color:#dcdbdb;
+                        line-height: 30px;
+                        font-weight: bold;
+                    }
+                    .hotcolumn-username:hover{
+                        color:#fc425f;
+                    }

@@ -1,0 +1,149 @@
+.fenfu-home{
+    background-color:rgb(32, 32, 51);
+    overflow-x:hidden;
+}
+.couponarea-contentbox{
+margin-top: 140px;
+}
+.couponarea-content{
+    width: 1040px;
+    margin: 0 auto;
+    font-size: 0;
+}
+    .coupon-titlebox{
+        margin-bottom: 20px;
+        line-height: 40px;
+    }
+        .coupon-title{
+            display: inline-block;
+            font-size: 24px;
+            color:#b9c0ef;
+        }
+        .coupon-rulebox{
+            display: inline-block;
+            font-size: 14px;
+            color:#9fa2ab;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+            .coupon-rule{
+                display: inline-block;
+            }
+    .coupon-listbox{
+        display: inline-block;
+        border-radius: 4px;
+        background-color: rgb(78, 78, 94);
+        width: 510px;
+        height: 240px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .coupon-listbox:nth-child(2n-1){
+        margin-left:20px;
+    }
+        .coupon-list{
+            padding: 10px 20px;
+            font-size: 0;
+            width: 450px;
+            box-sizing: border-box;
+            display: inline-block;
+            height: 100%;
+            position: relative;
+        }
+            .coupon-detailbox{
+                color:#dcdbdb;
+                display: inline-block;  
+            }
+                .coupon-pricebox{
+                    margin-top: 10px;
+                }
+                    .coupon-symbol{
+                        font-size: 18px;
+                        position: absolute;
+                        top: 18px;
+                    }
+                    .coupon-price{
+                        margin-left: 10px;
+                        font-size: 42px;
+                        line-height: 60px;
+                        display: inline-block;
+                    }
+                    .coupon-odds{
+                        display: inline-block;
+                        font-size: 14px;
+                        color:#9fa2ab;
+                    }
+                .coupon-name{
+                    margin-top: 20px;
+                    font-size: 20px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                .coupon-date{
+                    margin-top: 20px;
+                    color:#9fa2ab;
+                    font-size: 14px;
+                }
+                .coupon-get-qualificationbox,.coupon-use-qualificationbox{
+                    margin-top: 5px;
+                    color:#9fa2ab;
+                    font-size: 14px;
+                }
+                    .qualification-title{
+                        display: inline-block;
+                        font-weight: bold;
+                    }
+                    .qualification-meta{
+                        display: inline-block;
+                    }
+                .coupon-done{
+                    width: 80px;
+                    height: 80px;
+                    position: absolute;
+                    right: 20px;
+                    bottom: 20px;
+                    display: none;
+                }
+                    .coupon-done.off{display: block}
+                    .coupon-done img{
+                        width: 80px;
+                        height: 80px;
+                    }
+            .coupon-button{
+                display: inline-block;
+                text-align: center;
+                vertical-align: top;
+                width: 60px;
+                height: 100%;
+                border-radius: 0 4px 4px 0;
+                cursor: pointer;
+                background-color: #fc425f;
+            }
+                .coupon-button:hover{
+                    background-color: #e0596d;
+                }
+                .coupon-button:after{
+                    content:'';
+                    width: 1px;
+                    display: inline-block;
+                    height: 100%;
+                    vertical-align: middle;
+                    margin-bottom: -80px;        
+                    visibility: hidden;    
+                }
+            .coupon-button.off{background-color: #dcdbdb;}
+                .coupon-button button{
+                    font-size: 16px;
+                    display: inline-block;
+                    width: 32px;
+                    line-height: 30px;
+                    color:#dcdbdb;
+                    outline: none;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+                .coupon-button.off button{
+                    color:#9fa2ab
+                }

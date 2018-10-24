@@ -1,0 +1,152 @@
+
+    .fenfu-home{
+    background-color:rgb(32, 32, 51);   
+    overflow-x:hidden;  
+    }
+    .wisharea-contentbox{
+        margin-top: 140px;  
+        min-height: 660px;
+    }
+    .wisharea-content{
+        width: 880px;
+        margin: 0 auto;
+        font-size: 0;
+    }
+.wish-titlebox {
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+    .wish-title {
+        display: inline-block;
+        font-size: 20px;
+        color: #b9c0ef;
+    }
+    .wish-shadow{
+        margin-top: 10px;
+        width: 100%;
+        height: 1px;
+        box-shadow: 1px 1px 5px rgba(0,0,0,.8);
+    }
+.wish-mainbox{
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+    .wish-totalnumber{
+        margin-bottom: 30px;
+    }
+        .wish-totalnumber-meta{
+            color:rgba(173, 173, 174, 0.5);
+            display: inline-block;
+        }
+        .wish-totalnumber-number{
+            font-size: 16px;
+            color:#fc425f;
+            display: inline-block;
+        }
+    .wish-listbox{
+        position: relative;     
+        height: 100px;
+        line-height: 100px;
+    }
+    .wish-listbox+.wish-listbox{
+        padding-top: 20px;
+    }
+        .wish-listbox:hover .wish-game-discount,.wish-listbox:hover .wish-game-oriprice{
+            display: none;
+        }
+        .wish-listbox:hover .wish-game-button,.wish-listbox:hover .wish-game-delete{
+            display: block;
+        }
+    .wish-list{
+        background-color: rgba(78, 78, 94, 0.4);
+        box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+        border-radius: 4px;
+        transition: .2s;
+        height: 100px;
+    }
+        .wish-list:hover{
+            background-color: rgba(78, 78, 94, 1);
+        }
+        .wish-imgbox{
+            display: inline-block;
+            height: 100px;
+            width: 200px;
+            vertical-align: top;
+        }
+            .wish-imgbox img{
+                height: 100%;
+                width: 100%;
+                border-radius: 4px 0 0 4px;
+            }
+        .wish-game-namebox{
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            text-indent: 20px;
+            width: 250px;
+            vertical-align: middle;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+            .wish-game-namebox a{
+                color: #dcdbdb;
+                position: relative;
+                bottom: 3px;
+            }
+            .wish-game-namebox a:hover{
+                color:#fc425f;
+            }
+    .wish-game-discount,.wish-game-oriprice,.wish-game-finprice{
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+    }
+        .wish-game-discount span{ 
+            padding: 5px;
+            margin-top: 10px;
+            font-size: 16px;
+            width: 60px;
+            text-align: center;
+            color: #a4d007;
+            height: 30px;
+            background: #4c6b22;
+        }
+        .wish-game-oriprice{
+            font-size: 16px;
+            color: #7a80a2;
+            text-decoration: line-through;
+        }
+        .wish-game-finprice{
+            color: #fc425f;
+            font-weight: bold;
+            font-size: 16px;
+            transition: .5s;
+        }
+        .wish-game-button{
+            background: #fc425f;
+            outline: none;
+            border: none;
+            color: #ffffff;
+            padding: 5px;
+            width: 80px;
+            line-height: 30px;
+            margin-top: 30px;
+            float: right;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 2px;
+            display: none;
+        }
+        .wish-game-delete{
+            outline: none;
+            border: none;
+            background-color: transparent;
+            float: right;
+            color:#7a80a2;
+            font-size: 14px;
+            margin-top: 38px;
+            margin-right: 30px;
+            display: none;
+            cursor: pointer;
+        }

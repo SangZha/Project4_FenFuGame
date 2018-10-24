@@ -1,0 +1,414 @@
+.cartarea-contentbox .fa{
+    cursor: pointer;
+    position: absolute;
+}
+.fenfu-home{
+background-color:rgb(32, 32, 51);   
+overflow-x:hidden;  
+}
+.cartarea-contentbox{
+margin-top: 140px;  
+min-height: 660px;
+}
+.cartarea-content{
+width: 1040px;
+margin: 0 auto;
+font-size: 0;
+}
+.cart-titlebox {
+    margin-bottom: 40px;
+    line-height: 40px;
+}
+    .cart-title {
+        display: inline-block;
+        font-size: 20px;
+        color: #b9c0ef;
+    }
+    .cart-shadow{
+        margin-top: 10px;
+        width: 100%;
+        height: 1px;
+        box-shadow: 1px 1px 5px rgba(0,0,0,.6);
+    }
+.cart-mainbox{
+    margin-bottom: 40px;
+}
+/* 购物车导航 */
+    .cart-navbox{
+        background-color: rgba(78, 78, 94, 0.4);
+        border-radius: 4px;
+        position: relative;
+    }
+        .cart-nav{
+            padding: 0 15px;
+            box-sizing: border-box;
+            height: 40px;
+        }
+        .cart-nav .fa{
+            top:14px;
+        }
+            .cart-tag{
+                display: inline-block;
+                color:#9fa2ab;
+                font-size: 14px;
+                line-height: 40px;
+                height: 40px;
+            }
+                .cart-tag.check{
+                    width: 155px;
+                }
+                .cart-tag.gamename,.item-tag.name{
+                    width: 300px;
+                    margin-left: 10px;
+                }
+                .cart-tag.gametype,.item-tag.type{
+                    width: 120px;
+                    text-align: center;
+                }
+                .cart-tag.gameprice,.item-tag.price{
+                    width: 270px;
+                    text-align: center;
+                }
+                .cart-tag.oper,.item-tag.oper{
+                    width: 135px;
+                }
+            .tagname{
+                display: inline-block;
+                font-size: 16px;
+                margin-left: 20px;
+            }
+/* 购物车列表 */
+    .cart-listbox{
+        margin-top: 20px;
+        font-size: 16px;
+        color:#dcdbdb;
+    }
+        .cart-itembox:hover{
+            background-color: rgba(78, 78, 94, 1);
+            position: relative;
+        }
+        .cart-itembox{
+            background-color:rgba(78, 78, 94, .6);
+            border-radius: 4px; 
+            cursor: pointer;
+            box-shadow: 1px 1px 5px rgba(0,0,0,.6);
+        }
+            .cart-itembox+.cart-itembox{
+                margin-top: 20px;
+            }
+        .cart-item{
+            padding: 10px 15px;
+            position: relative;
+        }
+            .cart-item:after{
+                content:'';
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+            .cart-item .item-tag .fa{
+                top:43px;
+            }
+        .item-tag{
+            float: left;
+            color:#dcdbdb;
+            line-height: 80px;
+            height: 80px;
+            font-size: 14px;
+        }
+        .item-tag.checkbox{
+            font-size: 14px;
+            color:#9fa2ab;
+        }
+        .item-tag.img{
+            width: 135px;
+            height: 80px;
+            margin-left: 20px;
+        }
+            .item-tag.img img{
+                width: 135px;
+                height: 80px;
+            }
+        .item-tag.name{
+            margin-left: 15px;
+        }
+        .item-tag.name a{
+            color:#dcdbdb;
+        }
+        .item-tag.name a:hover{
+            color:#fc425f;
+        }
+        .item-tag.price{
+            font-weight: bold;
+        }
+        .item-tag.oprbox{
+            line-height: 80px;
+            position: relative;
+        }
+        .oprbox-delete,.oprbox-wish{
+            line-height: normal;
+            margin-top: 12px;
+            font-size: 14px;
+        }
+        .oprbox-delete:hover,.oprbox-wish:hover{
+            color:#fc425f;
+            cursor: pointer;
+        }
+/* 购物车结算 */
+.cart-countbox{
+    border-radius: 4px;
+    margin-top: 30px;
+    background-color: rgba(78, 78, 94, 0.4)
+}
+    .cart-count{
+        padding: 0 15px;
+        height: 80px;
+        position: relative;
+    }
+    .cart-count .fa{
+        top:34px;
+    }
+    .cart-count .cart-tag{
+        line-height: 80px;
+    }
+.cart-count div{
+    display: inline-block;
+}
+    .count-metabox,.count-totalbox,.count-button{
+        float: right;
+        font-size: 14px;
+        line-height: 80px;
+        color:#9fa2ab;
+    }
+    .count-button button{
+        padding: 10px 30px;
+        border:none;
+        outline: none;
+        background-color: #fc425f;
+        color:#dcdbdb;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .count-totalbox{
+        margin-right: 40px;
+        position: relative;
+    }
+        .total-number{
+            font-size: 16px;
+            vertical-align: bottom;
+            color:#fc425f;
+        }
+    .count-metabox{
+        margin-right: 40px;
+    }
+        .meta-number{
+            font-size: 16px;
+            vertical-align: bottom;
+            color:#fc425f;
+        }
+/* 购物车优惠券 */
+.cart-coupon{
+    position: relative;
+    width: 330px;
+    height: 100px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: rgba(78, 78, 94, .6);
+    cursor: pointer;
+    margin-top:20px;
+    margin-left: 25px;
+    display: inline-block;
+}
+    .cart-coupon:nth-child(3n-2){
+        margin-left: 0;
+    }
+    .cart-coupon:nth-child(-n+3){
+        margin-top: 0;
+    }
+.cart-coupon-leftbox{
+    float: left;
+    width: 108px;
+    text-align: center;
+    border-right: 1px dotted #202539;
+}
+    .cart-coupon-pricebox{
+        position: relative;
+        display: inline-block;
+        height: 100px;
+        line-height: 100px;
+    }
+    .cart-coupon-label{
+        font-size: 20px;
+        text-align: left;
+        height: 15px;
+        line-height: 15px;
+        color: #b9c0ef;
+        position: absolute;
+        left: 0;
+        top: 30px;
+    }
+    .cart-coupon-value{
+        color: #b9c0ef;
+        font-size: 42px;
+        text-align: left;
+        margin-left: 15px;
+    }
+.cart-coupon-rightbox{
+    display: inline-block;
+    margin-left: 16px;
+    width: 176px;
+    padding: 21px 21px 24px 10px;
+    box-sizing: border-box;
+    color: #7a80a2;
+}
+    .cart-coupon-name{
+        width: 152px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .cart-coupon-date{
+        width: 152px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+    }
+    .cart-coupon .semi-circle {
+        position: absolute;
+        left: 98px;
+        top: 0;
+        border-radius: 0 0 10px 10px;
+        background-color: rgb(32, 32, 51);
+        width: 20px;
+        height: 10px;
+    }
+    .cart-coupon .cart-coupon-border{
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        width: 330px;
+        height: 100px;
+        border: 2px solid #fc425f;
+        border-radius: 2px;
+        box-sizing: border-box;
+        color: #ffffff;
+        display: none;
+    }
+    .cart-coupon .cart-coupon-border.on{
+        display: block;
+    }
+        .cart-coupon .cart-coupon-border i{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            color: #fff;
+            font-size: 16px;
+        }
+        .cart-coupon .cart-coupon-border .triangle{
+            width: 0;
+            border-width: 16px;
+            border-style: solid;
+            border-color: transparent #fc425f #fc425f transparent;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+/* 订单详情 */
+.paybox-overlay.active{
+    display: block;
+}
+.paybox-overlay{
+    width: auto;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    overflow: auto;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    text-align: center;
+}
+.paybox-overlay:before {
+    content: '';
+    top: -50px;
+    display: inline-block;
+    height: 100%;
+    width: 1px;
+    vertical-align: middle;
+    margin-bottom: -50px;
+}
+    .paybox-block {
+        width: 500px;
+        background-color: #33394d;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 4px;
+        box-sizing: border-box;
+        position: relative;
+        text-align: center;
+    }
+.paybox-title{
+font-size: 24px;
+color:#f5f5f5;
+padding: 24px 0;
+margin: 0 40px;
+border-bottom:1px dashed #f5f5f5;
+}
+.paybox-gamebox{
+    margin: 24px 60px;
+}
+    .gamebox-detail{
+        font-size: 14px;
+        color:#dcdcdc;
+        margin-top: 8px;
+        height: 18px;
+    }
+        .gamebox-name,.couponbox-name{
+            float: left;
+        }
+        .gamebox-price,.couponbox-price{
+            float: right;
+        }
+.paybox-couponbox{
+    margin: 24px 60px;
+}
+    .couponbox-detail{
+        font-size: 14px;
+        color:#fc425f;
+        margin-top: 8px;
+        height: 18px;
+    }
+.paybox-settlementbox{
+    margin: 20px 40px;
+    border-top:1px dashed #f5f5f5;
+}
+    .settlement-pricebox{
+        margin: 16px 20px;
+        text-align: right;
+    }
+        .settlement-meta,.settlement-price{
+            display: inline-block;
+            color:#f5f5f5;
+            font-size: 18px;
+        }
+    .settlement-backbutton{
+        text-align: right;
+        margin: 10px 20px;
+    }
+        .settlement-backbutton a{
+            outline: none;
+            background-color: transparent;
+            border:none;
+            padding: 0;
+            font-size: 14px;
+            color:#7d7d7d;
+            cursor: pointer;
+        }

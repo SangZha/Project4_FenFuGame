@@ -1,0 +1,592 @@
+.white{
+    color:#f5f5f5;
+}
+.setting-color-1{
+    color:#dcdbdb;
+}
+.setting-color-2{
+    color:rgb(173, 173, 174)
+}
+.setting-color-3{
+    color:rgb(32, 32, 51);
+}
+.fontsize-1{
+    font-size: 12px;
+}
+.fontsize-2{
+    font-size: 14px;
+}
+.fontsize-3{
+    font-size: 16px;
+}
+
+.fenfu-home{
+    background-color:rgb(32, 32, 51);
+    overflow-x:hidden;
+}
+    .settingarea-content{
+        width: 1120px;
+        margin: 0 auto;
+    }
+    .setting-block{
+        margin-top: 130px;
+    }
+/* 用户基本信息 */
+        .setting-userinfobox{
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+            .setting-userinfo{
+                padding-right: 35px;
+            }
+            .userinfo-avatarbox>img{
+                width: 120px;
+                height: 120px;
+                border-radius: 120px;
+                box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            }
+            .setting-userinfo .userinfo-namebox,.setting-userinfo .userinfo-introbox{
+                margin-top: 15px;
+                color:#f5f5f5;
+            }
+                .setting-userinfo .userinfo-name{
+                    font-size: 36px;
+                    font-weight: bold;
+                }
+                .setting-userinfo .userinfo-introbox{
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+/* 时间轴跳转导航 */
+        .setting-timelinebox{
+            margin-top: 40px;
+        }
+        .setting-timelinebox>ul{
+            text-align: center;
+        }
+            .timeline-buttonbox{
+                text-align: center;
+                display: inline-block;
+                position: relative;
+            }
+                .timeline-buttonbox:after{
+                    content:'';
+                }
+                .timeline-buttonbox:hover:after{
+                    content:'';
+                    width: 100%;
+                    height: 2px;
+                    background-color: #f5f5f5;
+                    display: block;
+                    position: absolute;
+                    bottom:-15px;
+                }
+            .timeline-buttonbox+.timeline-buttonbox{
+                margin-left: 30px;
+            }
+            .timeline-buttonbox .button{
+                padding: 5px;
+                box-sizing: border-box;
+            }
+                .timeline-buttonbox .button a{
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+                .timeline-buttonbox a .button-name{
+                    margin-top: 10px;
+                }
+
+/* 主要内容展示 */
+    .index-1,.index-2{
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    /* 用户信息 */
+    .setting-indexbox{
+        margin-top: 40px;
+        position: relative;
+    }
+    .setting-index{
+        font-size: 0;
+    }
+    .article-card,
+    .comment-card,
+    .order-card,
+    .userinfo-card{
+            background-color: rgb(78, 78, 94);
+            border-radius: 3px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            padding: 20px;
+            box-sizing: border-box;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .userinfo-card{
+            width: 600px;
+        }
+        .card-index{
+            font-size: 18px;
+            width: 270px;
+            display: inline-block;
+        }
+        .card-index+.card-index{
+            margin-bottom: 20px;
+        }
+            .card-index .fa,.card-index .outputbox{
+                display: inline-block;
+            }
+            .card-index .outputbox{
+                font-size: 14px;
+                margin-left: 10px;
+            }
+            .card-index.ps{
+                width: 540px;
+                margin: 0;
+            }
+            .card-index.ps .outputbox{
+                margin: 0;
+            }
+    /* 用户订单 */
+    .order-card{
+        width: 510px;
+        height: 539px;
+        margin-left: 10px;
+    }
+    .comment-index:hover,.order-index:hover{
+        transition: .5s;
+        border-radius: 3px;
+        background-color: rgba(140, 140, 170, 0.4);
+    }
+    .order-index+.order-index{
+        margin-top: 20px;
+    }
+    .order-index>a{
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+    .orderimg-box{
+        float: left;
+    }
+        .orderimg-box>img{
+            width: 100px;
+            height: 60px;
+            border-radius: 3px;
+        }
+    .ordername-box{
+        margin-left: 10px;
+        height: 60px;
+        width: 220px;
+        display: inline-block;
+    }
+        .ordername-box .on-ch,
+        .ordertime{
+            font-size: 16px;
+            line-height: 30px;
+        }
+        .ordername-box .on-en,
+        .orderdate{
+            font-size: 14px;
+            line-height: 30px;
+        }
+        .ordertime{
+            text-align: center;
+        }
+    .orderdate-box{
+        text-align: right;
+        display: inline-block;
+        height: 60px;
+    }
+    .order-more{
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: right;
+    }
+
+    /* 用户点评 */
+    .comment-cardbox{
+        position: absolute;
+        top: -345px;
+        font-size: 14px;
+        width: 600px;
+    }   .comment-card{
+            width: 100%;
+            height: 641px;
+            }
+
+        .comment-indexbox+.comment-indexbox{
+            padding-top: 20px;
+            border-top: 1px solid #dcdbdb;
+        }
+        .comment-index{
+            max-height: 160px;
+            margin-bottom: 20px;
+        }
+
+            .comment-index>a{
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        .commentimg-box{
+            width: 100px;
+            height: 60px;
+            float: left;
+        }
+            .commentimg-box>img{
+                width: 100px;
+                height: 60px;
+                border-radius: 3px;
+            }
+        .commentname-box{
+            margin-left: 10px;
+            display: inline-block;
+            height: 60px;
+        }
+    .commentname-box .cn-ch,.commentname-box .cn-en{
+        line-height: 60px;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .commentmain-box{
+        padding-bottom: 10px;
+    }
+        .comment-evaluation{
+            text-align: center;
+            font-size: 24px;
+            width: 100px;
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+            .comment-evaluation .fa-thumbs-up{color:#b45555;}
+            .comment-evaluation .fa-thumbs-down{color:#74a468;}
+        .comment-contentbox{
+            border-top:1px dashed #dcdbdb;
+            padding-top: 16px;
+            display: inline-block;
+            font-size: 14px;
+            color:#dcdbdb;
+            vertical-align: top;
+            width: 440px;
+        }
+
+    /* 用户文章 */
+        .article-cardbox{
+            margin-left: 610px;
+            width: 510px;
+            height: 300px;
+            font-size: 14px;
+        }
+        .article-card{
+            width: 510px;
+            height: 296px;
+        }
+        .article-index+.article-index{
+            padding-top: 11px;
+            border-top: 1px solid #dcdbdb;
+        }
+        .settingarea-content .article-title{
+                width: 410px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-size: 24px;
+                color:#dcdbdb;
+                font-weight: bold;
+                margin-bottom: 6px;
+            }
+            .settingarea-content .article-content{
+                font-size: 14px;
+                color:rgb(173, 173, 174);
+                height: 60px;
+                overflow: hidden;
+                word-break: break-all;
+                text-overflow: ellipsis;
+                display: -webkit-box; /** 将对象作为伸缩盒子模型显示 **/
+                -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+                -webkit-line-clamp: 3; /** 显示的行数 **/
+                margin-bottom: 11px;
+            }
+ /* 设置区块的样式 */
+    .setting-editbox{
+        width: 800px;
+        margin: 0 auto;
+    }
+    .setting-edit{
+        background-color: rgb(78, 78, 94);
+        border-radius: 3px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        padding: 20px;
+        box-sizing: border-box;
+        vertical-align: top;
+    }
+    .setting-edit-item{
+        position: relative;
+        line-height: 50px;
+        color: #dcdbdb;
+        font-size: 13px;
+        margin-bottom: 10px;
+        width: 500px;
+        margin: 0 auto;
+    }
+    .setting-edit-item.button{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+.edit-item-meta{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    vertical-align: top;
+    height: 100%;
+    font-size: 14px;
+}
+    .edit-item-box{
+        display: inline-block;
+        position: relative;
+    }
+        .edit-item-box input[type="text"] {
+            border: none;
+            width: 240px;
+            line-height: 26px;
+            padding-left: 5px;
+            outline: none;
+            background-color: transparent;
+            color: #dcdbdb;
+        }
+        .edit-item-box textarea {
+            resize: none;
+            width: 300px;
+            padding: 3px;
+            border: none;
+            border-radius: 2px;
+            outline: none;
+            margin-top: 12px;
+            background-color: transparent;
+            color: #dcdbdb;
+            font-size: 14px;
+            font-family: Arial;
+        }
+        .setting-edit-item button{
+            outline:none;
+            background-color: transparent;
+            border:1px solid #dcdbdb;
+            border-radius: 4px;
+            color:#dcdbdb;
+            padding: 5px 20px;
+            cursor: pointer;
+        }
+        .setting-edit-item:hover button{
+            background-color:#fc425f;
+            border:1px solid #fc425f;
+        }
+/* 订单区块的样式 */
+.setting-orderbox{
+        width: 800px;
+        margin: 0 auto;
+    }
+    .setting-order{
+        background-color: rgb(78, 78, 94);
+        border-radius: 3px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        padding: 20px 80px;
+        box-sizing: border-box;
+        vertical-align: top;
+        font-size: 16px;
+    }
+        .setting-order-navbox{
+            margin-left: 180px;
+            color:#dcdbdb;
+        }
+            .setting-navbox-name{
+                display: inline-block;
+                width: 220px;
+            }
+            .setting-navbox-date{
+                display: inline-block;
+            }
+    .setting-order-listbox{
+        margin-top: 20px;
+    }
+        .setting-order-item{
+            margin-bottom: 20px;
+            box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+            border-radius: 4px;
+            background-color: rgba(0,0,0,.1);
+        }
+            .setting-order-item:hover{
+                background-color: rgba(0,0,0,.4);
+            }
+        .setting-order-imgbox{
+                float: left; 
+                height: 90px;
+            }
+            .setting-order-imgbox img{
+                width: 150px;
+                height: 90px;
+                border-radius: 4px 0 0 4px;
+            }
+        .setting-order-namebox{
+            margin-left: 30px;
+            height: 90px;
+            width: 220px;
+            display: inline-block;
+        }
+            .setting-order-namebox .on-ch{  
+                margin-top: 15px;
+            }
+            .setting-order-namebox .on-en{  
+                margin-top: 15px;
+            }
+        .setting-order-datebox{
+            text-align: right;
+            display: inline-block;
+            height: 90px;
+            vertical-align: top
+        }  
+            .setting-order-datebox .orderdate{
+                margin-top: 25px;
+            }
+/* 点评模块 */
+.setting-commentbox{
+        width: 800px;
+        margin: 0 auto;
+    }
+    .setting-comment{
+        background-color: rgb(78, 78, 94);
+        border-radius: 3px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        padding: 20px 40px;
+        box-sizing: border-box;
+        vertical-align: top;
+        font-size: 16px;
+    }
+        .setting-comment-itembox{
+            margin: 20px 0;
+        }
+        .setting-comment-item{
+            position: relative;
+            background-color: rgba(0,0,0,0.1);
+            box-shadow: 1px 1px 4px rgba(0,0,0,0.2)
+        }
+            .setting-comment-item:hover{
+                background-color: rgba(0,0,0,0.3);
+            }
+                .setting-comment-topbox .setting-commentimg-box{
+                    width: 120px;
+                    height: 72px;
+                    float: left;
+                }
+                    .setting-comment-topbox .setting-commentimg-box img{
+                        width: 120px;
+                        height: 72px;
+                        border-radius: 3px;
+                    }
+                .setting-comment-topbox .setting-commentname-box{
+                    margin-left: 10px;
+                    display: inline-block;
+                    height: 72px;
+                }
+                    .setting-comment-topbox .setting-commentname-box .cn-ch,.setting-comment-topbox .setting-commentname-box .cn-en{
+                        line-height: 60px;
+                        display: inline-block;
+                        margin-right: 10px;
+                    }        
+                .setting-comment-mainbox{
+                    padding-bottom: 10px;
+                }
+                    .setting-comment-mainbox .comment-evaluation{
+                        text-align: center;
+                        font-size: 24px;
+                        width: 100px;
+                        display: inline-block;
+                        margin-right:30px;
+                    }
+                        .setting-comment-mainbox .comment-evaluation .fa-thumbs-up{
+                            color: #b45555;
+                        }
+                        .setting-comment-mainbox .comment-evaluation .fa-thumbs-down{
+                            color: #74a468
+                        }
+                    .setting-comment-mainbox .comment-contentbox {
+                        border-top: 1px dashed #dcdbdb;
+                        padding-top: 16px;
+                        display: inline-block;
+                        font-size: 14px;
+                        color: #dcdbdb;
+                        vertical-align: top;
+                        width: 540px;
+                    }
+/* 文章与帖子模块 */
+.setting-postbox{
+        width: 800px;
+        margin: 0 auto;
+    }
+    .setting-post{
+        font-size: 16px;
+    }
+        .setting-post-itembox+.setting-post-itembox{
+            margin-top: 30px;
+        }
+        .setting-post-item{
+            padding: 30px 40px;
+            background-color: rgb(78, 78, 94);
+            border-radius: 3px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+        .setting-post-item:hover .setting-post-title{
+            color:#fc425f;
+        }
+        .setting-post-avatar{
+            width: 20px;
+            height: 20px;
+            float: left;
+        }
+            .setting-post-avatar img{
+                width: 20px;
+                height: 20px;
+                border-radius: 20px
+            }
+        .setting-post-name{
+            margin-left: 10px;
+            color:#fc425f;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 14px;
+            line-height: 20px;
+            vertical-align: top
+        }
+        .setting-post-div{
+            font-size: 14px;
+            margin-left: 10px;
+            display: inline-block;
+            color:rgb(173, 173, 174);
+            line-height: 20px;
+            vertical-align: top
+        }
+    .setting-post-mainbox{
+        margin-top: 10px;
+    }
+        .setting-post-title{
+            font-size: 24px;
+            color:#dcdbdb;
+            font-weight: bold;
+        }
+        .setting-post-content{
+            margin-top: 10px;
+            color:rgb(173, 173, 174);
+            overflow: hidden;
+            word-break: break-all;
+            text-overflow: ellipsis;
+            display: -webkit-box; /** 将对象作为伸缩盒子模型显示 **/
+            -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+            -webkit-line-clamp: 3; /** 显示的行数 **/
+        }

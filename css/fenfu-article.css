@@ -1,0 +1,323 @@
+.color-3 {
+    color: rgb(255,65,95);
+}
+
+
+body{
+    background-color:rgb(32, 32, 51);
+}
+.fenfu-home{
+    overflow-x:hidden;
+}
+.articlearea-content{
+    margin-top:80px;
+    position: relative;
+}
+    .article-backgroundimg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        top: 0;
+        overflow: hidden;
+        background: center center;
+        background-size: cover;
+    }
+    .article-gradient{
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: -webkit-gradient(linear, 0 24%, 0% 85%, from(rgba(36, 36, 56,.1)), to(rgba(36, 36, 56,1)));
+        background: linear-gradient(-180deg, rgba(36, 36, 56,.1) 0%,rgba(36, 36, 56,1) 85%);
+        background: -moz-linear-gradient(top, rgba(36, 36, 56,.1), rgba(36, 36, 56,1));
+        background: -ms-linear-gradient(top, rgba(36, 36, 56,.1) 0%,rgba(36, 36, 56,1) 85%);
+    }
+.article-mainbox{
+    margin-top: 500px;
+    z-index: 1;
+    position: relative;
+}
+    .article-main{
+        width: 720px;
+        margin: 0 auto;
+    }
+        .article-userinfo{
+            margin-bottom: 45px;
+        }
+            .article-userhead{
+                float: left;
+                width: 64px;
+                height: 64px;
+            }
+                .article-userhead a img{
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 64px;
+                }
+            .article-userintrobox{
+                font: 0;
+                position: relative;
+                margin-left: 79px;
+            }
+                .article-username{
+                    color:#dcdbdb;
+                    font-size: 18px;
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+                    .article-username a {color:#f5f5f5;font-weight: bold}
+                    .article-username:hover a{color:#fc425f;}
+                .article-userintro{
+                    color:rgba(255,255,255,.5);
+                    display: inline-block;
+                    font-size: 14px;
+                    padding-top: 10px;
+                }
+            .article-metabox{
+                margin-left: 79px;
+                font-size: 14px;
+                color:rgba(255,255,255,.7)
+            }
+                .article-meta,.article-date{
+                    margin-right: 10px;
+                    display: inline-block;
+                    padding-top: 10px;
+                }
+        .articlearea-content .article-title{
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 45px;
+            color:#f5f5f5;
+            line-height: 54px;
+        }
+        .articlearea-content .article-content{
+            font-size: 18px;
+            color:rgba(185, 192, 239, .5);
+            padding-bottom: 50px;
+        }
+        .articlearea-content .article-content p+p{
+                margin-top: 10px;
+            }
+            .articlearea-content .article-content h1{
+                font-size: 24px;
+                color:rgba(185, 192, 239, 1)
+            }
+            .articlearea-content .article-content img{
+                width: auto;
+                max-width: 100%;
+                margin: 20px auto;
+            }
+            .article-boxshadow{
+                position: absolute;
+                bottom: -1px;
+                width: 100%;
+                height: 1px;
+                box-shadow: 1px 1px 5px rgba(0,0,0,.8);
+            }
+/* 评论区 */
+.articlearea-content .mainblock-replybox {
+    padding: 40px 0;
+    background-color: rgb(51, 51, 79);
+}
+    /* 评论发布 */
+    .articlearea-content .mainblock-reply{
+        margin: 0 auto;
+        width: 720px;
+    }
+        .reply-inputbox{
+            padding-bottom: 20px;
+        }
+            .inputbox-userhead{
+                width: 40px;
+                height: 40px;
+                float: left;
+            }
+                .inputbox-userhead>img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 40px;
+                }
+            .reply-inputbox .inputbox{
+                margin: 0 60px;
+                font-size: 0px;
+                box-sizing: border-box;
+                border:1px solid transparent;
+            }
+                .reply-inputbox .inputbox textarea{
+                    resize: none;
+                    border:1px solid transparent;
+                    outline: none;
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 80px;
+                    padding: 5px 10px;
+                    border-radius: 3px 3px 0 0;
+                    background-color: rgb(47, 47, 69);
+                    color:#f5f5f5;
+                    display: inline-block;
+                    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+                }
+                .reply-inputbox .inputbox textarea[placeholder]{font-size: 14px;}
+                .reply-inputbox .inputbox textarea:focus{border:1px solid rgb(255,65,95)}
+                .reply-inputbox .inputbox .inputbox-buttonbox{
+                    width: 100%;
+                    background-color: rgb(47, 47, 69);
+                    box-sizing: border-box;
+                    text-align: right;
+                    border-radius: 0 0 3px 3px;
+                    border:1px solid transparent;              
+                    height: 24px;
+                    position: relative;
+                }
+                    .reply-inputbox .inputbox .inputbox-buttonbox .inputbox-button{
+                        position: relative;
+                        width: 10%;
+                        height: 24px;
+                        right: -1px;
+                        bottom: 1px;
+                        background-color: #171a21;
+                        color:#dcdbdb;
+                        border-radius: 0 0 3px 0;
+                        border:1px solid transparent;
+                        padding: 2px 15px;
+                        cursor: pointer;
+                        box-sizing: border-box
+                    }
+    /* 帖子的评论 */
+    .reply-outputbox{
+        margin-top: 20px;
+    }
+    .reply-output+.reply-output{
+        padding-top: 40px;
+}
+        /* 左边信息 */
+        .output-leftbox{
+            float: left;
+        }
+                .output-leftbox .leftbox-userhead{
+                    width: 40px;
+                    height: 40px;
+                }
+                    .output-leftbox .leftbox-userhead a img{
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 40px;
+                    }
+            .output-leftbox .leftbox-button{
+                display: inline-block;
+                margin-top: 10px;
+            }
+            .output-leftbox .leftbox-button .reply-button{
+                border:none;
+                outline: none;
+                background-color: rgb(51, 51, 79);
+                color:rgba(255,255,255,.3);
+                cursor: pointer;
+            }
+        /* 右边主体 */
+        .output-rightbox{
+            margin:0 60px;    
+            color:#a3a2a2                 
+        }
+            .rightbox-username,.rightbox-comment{
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            .rightbox-time{
+                font-size: 12px;
+                padding-bottom: 20px;
+            }
+        /* 叠加回复 */
+        .output-answerbox{
+            margin: 0 60px;
+        }
+            .output-answer{
+                padding-bottom: 20px;
+            }
+            .answer-userhead{
+                width: 24px;
+                height: 24px;
+                float: left;
+            }
+                .answer-userhead>a>img{
+                    height: 24px;
+                    width: 24px;
+                    border-radius: 24px;
+                }
+            .answer-mainbox{
+                padding: 2px;
+                margin-left: 34px;
+                font-size: 14px;
+                color:#a3a2a2;
+                position: relative;
+            }
+                .answer-mainbox .answer-username{float: left;line-height: 24px}
+                .answer-mainbox .answer-useranswer{margin-left: 8px;line-height: 24px}
+            .answer-metabox{
+                margin-left: 34px;
+                font-size: 12px;
+                color:#a3a2a2;
+            }
+                .answer-metabox .answer-time{
+                    margin-top: 10px;
+                    display: inline-block;
+                }
+                .answer-metabox .answer-button{
+                    background-color: rgb(51, 51, 79);
+                    color: rgba(255,255,255,.3);
+                    cursor: pointer;
+                    font-size: 12px;
+                    outline: none;
+                    border:none;
+                }
+        /* 弹出的回复框 */
+        .output-inputbox{
+            margin: 0 60px;
+        }
+            .output-inputbox .inputbox{
+                margin-bottom: 20px;
+                font-size: 0;
+                position: relative;
+            }
+            .output-inputbox .inputbox.on{display: block;}
+            .output-inputbox .inputbox.off{display: none;}
+            .output-inputbox .inputbox textarea{
+                display: inline-block;
+                resize: none;
+                outline: none;
+                width: 89%;
+                height: 60px;
+                padding: 5px 10px;
+                border:1px solid transparent;
+                border-radius: 3px;
+                box-sizing: border-box;
+                background-color: rgb(47, 47, 69);
+                color:#f5f5f5;
+                font-size: 14px;
+                font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+            }
+            .output-inputbox .inputbox .inputbox-buttonbox{
+                font-size: 14px;
+                display: inline-block;
+                height: 60px;
+                width: 10%;
+                margin-left: 1%;
+                position: absolute;
+            }
+                .output-inputbox .inputbox .inputbox-buttonbox .inputbox-button{
+                    width: 100%;
+                    height: 100%;
+                    background-color: #171a21;
+                    color: #dcdbdb;
+                    border-radius: 3px;
+                    padding: 2px 15px;
+                    cursor: pointer;
+                    box-sizing: border-box;   
+                    border:none;
+                    outline: none;
+                }
+.articlearea-content+.fenfu-bottom{
+    margin-top: 0;
+}
